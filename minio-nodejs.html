@@ -1,0 +1,575 @@
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+
+     <title> Minio Docs </title>
+
+     <!-- Styles -->
+     <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+ 	 <link href="assets/css/skin-gray.css" rel="stylesheet">
+     <link href="assets/css/custom.css" rel="stylesheet">
+	 <link href="assets/css/prism.css" rel="stylesheet" />
+
+     <!-- Fonts -->
+       <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+	   
+     <!-- Favicons -->
+     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+     <link rel="icon" href="assets/img/favicon.ico">
+	
+   </head>
+
+   <body>
+
+     <header class="site-header">
+
+       <!-- Top navbar & branding -->
+       <nav class="navbar navbar-default">
+         <div class="container">
+
+           <!-- Toggle buttons and brand -->
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+               <span class="glyphicon glyphicon-option-vertical"></span>
+             </button>
+
+             <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+
+             <a class="navbar-brand"  href="minio-docs.html"> <img src="assets/img/minlogo.svg" alt="logo" alt="logo"> Minio Docs </a>
+           </div>
+           <!-- END Toggle buttons and brand -->
+
+           <!-- Top navbar -->
+           <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+             <ul class="nav navbar-nav navbar-right">
+               <li class="active">  
+ 				  	<div class="home-link text-right" style="margin-top:10px;">
+        		   				<a href="http://minio.io"><i class="fa fa-home fa-2x" style= "color:white;"></i> </a>
+    					</div>
+ 			 </li>
+              
+             </ul>
+           </div>
+           <!-- END Top navbar -->
+
+         </div>
+       </nav>
+       <!-- END Top navbar & branding -->
+      
+     </header>
+
+
+     <main class="container">
+       <div class="row">
+
+         <!-- Sidebar -->
+         <aside class="col-md-3 col-sm-3 sidebar">
+
+           <ul class="sidenav dropable sticky">
+            
+             <li>
+               <a class="active" href="minio-docs.html"> Minio SDK </a>
+               <ul>
+                 <li><a class="active" href="minio-nodejs.html">Node.js</a></li>
+                 <li><a href="minio-ror.html">Ruby on Rails </a></li>
+                 <li><a href="minio-java.html"> Java </a></li>
+                 <li><a href="minio-py.html"> Python </a></li>
+                 <li><a href="minio-net.html">.NET </a></li>
+                 <li><a href="minio-go.html">Golang</a></li>
+               </ul>
+             </li>
+
+             <li>
+               <a href="minio-server.html"> Minio Server </a>
+              
+             </li>
+
+             <li>
+               <a href="minio-client.html"> Minio Client </a>
+               
+             </li>
+
+             
+
+           </ul>
+
+         </aside>
+         <!-- END Sidebar -->
+
+
+         <!-- Main content -->
+         <article class="col-md-9 col-sm-9 main-content" role="main">
+          
+           <header>
+             <h1>Node.js Quick Start  </h1>
+              
+              
+           </header>
+		   
+		   <!-- STEP 1 ########################## make this better with vertical lines connecting #s -->
+           <section>
+ 		 	
+				<div class="row">
+	  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+					 <span class="fa-stack fa-2x">
+				     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+				     <strong class="fa-stack-1x text-muted">1</strong>				 
+				   	 </span>    
+				</div>
+					
+				<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+					<h2> Install </h2>
+					<p> Minio Node.js API can be installed with npm on the command line. </p>
+					<pre class="prettyprint linenums  lang-bash" data-lang="bash" data-name="bash" data-highlight="" data-resize="false"><code>$ npm install minio --save
+					</code></pre> 
+				</div>
+			</div>	
+			</section>
+			 
+			<!-- STEP 1 ########################## make this better with vertical lines connecting #s --> 
+			<section>	
+				<div class="row">
+	  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+					 <span class="fa-stack fa-2x">
+				     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+				     <strong class="fa-stack-1x text-muted">2</strong>				 
+				   	 </span>    
+				</div>
+					
+				<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+					<h2> SetUp  </h2>
+					<p> To use the Minio Node.js module in your application, just require the Node client library. Initialize an s3client object with the minio SDK to directly access your AWS S3 by setting up your keys like shown below. </p>
+					 <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code> 
+						var Minio = require('minio'); 
+						
+var s3client = new Minio({
+	endPoint:  's3.amazonaws.com',
+	accessKey: 'YOUR-ACCESSKEYID',
+	secretKey: 'YOUR-SECRETACCESSKEY'
+});
+						
+					</code>
+					</pre> 
+				</div>
+			</div>
+			</section>
+		
+			<!-- STEP 3 ########################## make this better with vertical lines connecting #s -->
+			<section>	   
+				 
+ 			    <div class="row">
+		  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+						 <span class="fa-stack fa-2x">
+					     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+					     <strong class="fa-stack-1x text-muted">3</strong>				 
+					   	 </span>    
+					</div>
+		
+				<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+					<h2> List Buckets  </h2>
+					<p> After you have initialized and setup your s3client with the minio SDK, you can use it get a list of all your S3 buckets with the listBuckets() API. Retrieve the list of your S3 buckets by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method. </p>
+					 <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code> s3client.listBuckets(function(e, bucketStream) {
+  if (e) {
+    console.log(e)
+    return
+  }
+  bucketStream.on('data', function(obj) {
+    console.log(obj)
+  });
+  bucketStream.on('end', function() {
+    console.log("End")
+  });
+  bucketStream.on('error', function(e) {
+    console.log("Error", e)
+  });
+});
+						 
+			
+					</code>
+					</pre> 
+	   				 <div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
+	    					<h2> Additional Bucket Operations  </h2>
+	    					<p> There are many additional Bucket operations you can do. See Below : </p>
+						
+	   						<table class="table table-bordered table-striped table-info">
+							  <thead>
+								  <tr>
+									  <th> Description </th>
+									  <th> API Usage </th>
+									  
+								  </tr>
+								  
+							  </thead>	
+	   						  <tbody>
+	   						    <tr>
+	   						      <td>Create a New Bucket </td>
+	 						      <td>	  
+									  <p> makeBucket(bucket, acl, region, cb) </p>	 
+									  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1">See Example</button>
+									    <div id="demo1" class="collapse">
+											<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+	if (e) {
+		return console.log(e);
+	}
+	console.log("Success");
+});</code> </pre>
+									    </div>
+									   
+									  
+									   </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td>Check if a Bucket exists</td>
+	   						      <td>
+								  <p> bucketExists(bucket, cb) </p>	 
+								  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2">See Example</button>
+								    <div id="demo2" class="collapse">
+										<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code> s3Client.bucketExists('my-bucketname', function(e) {
+	if (e) {
+	  return console.log(e);
+	}
+	console.log("True");
+}); </code> </pre>
+								    </div>
+
+								  </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> Remove a Bucket</td>
+	   						      <td> 
+									<p>  removeBucket(bucket, cb) </p>	 
+									<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo3">See Example</button>
+									 <div id="demo3" class="collapse">
+									  	<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>s3Client.removeBucket('my-bucketname', function(e) {
+	if (e) {
+    	return console.log(e)
+  	}
+  	console.log("Success")
+});</code> </pre>
+									 </div>
+									  
+									  
+								  </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> Get Access Controls (ACL) for a Bucket</td>
+	   						      <td> 
+									  <p> makeBucket(bucket, acl, region, cb) </p>	 
+									  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo4">See Example</button>
+									    <div id="demo4" class="collapse">
+											<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+  if (e) {
+	return console.log(e);
+  }
+  console.log("Success");
+});</code> </pre>
+									    </div>
+									  </div>
+								  </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td>Set Access Controls (ACL) for a Bucket</td>
+	   						      <td> 
+									  <p> makeBucket(bucket, acl, region, cb) </p>	 
+									  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">See Example</button>
+									    <div id="demo" class="collapse">
+											<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>  
+											s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+											  if (e) {
+											    return console.log(e)
+											  }
+											  console.log("Success")
+											});</code> </pre>
+									    </div>
+									  </div>
+								  </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td>List all Objects inside a Bucket</td>
+	   						      <td>
+								  <p> makeBucket(bucket, acl, region, cb) </p>	 
+								  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">See Example</button>
+								    <div id="demo" class="collapse">
+										<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>  
+										s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+										  if (e) {
+										    return console.log(e)
+										  }
+										  console.log("Success")
+										});</code> </pre>
+								    </div>
+								  </div>
+	   						      </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td>List Incomplete Uploads to a Bucket</td>
+	   						      <td>
+								  <p> makeBucket(bucket, acl, region, cb) </p>	 
+								  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">See Example</button>
+								    <div id="demo" class="collapse">
+										<pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>  
+										s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+										  if (e) {
+										    return console.log(e)
+										  }
+										  console.log("Success")
+										});</code> </pre>
+								    </div>
+								  </div>
+	   						      </td>
+	   						    </tr>
+	   						  </tbody>
+	   						</table>
+	   				</div>
+				</div>
+			</div>
+					 			  
+           </section>
+		   
+		   <!-- STEP 4 ########################## make this better with vertical lines connecting #s -->
+	   
+	   			<section>	   
+			 
+	    			    <div class="row">
+	   		  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+	   						 <span class="fa-stack fa-2x">
+	   					     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+	   					     <strong class="fa-stack-1x text-muted">4</strong>				 
+	   					   	 </span>    
+	   					</div>
+	
+	   				<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+	   					<h2>  Get Objects  </h2>
+	   					<p> Once you have successfully initialized your s3client with the minio SDK, you can use it get a specific object from a specific bucket with the getObject() API. Retrieve your objects by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method. You can even compute the size. </p>
+	   					 <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>var size = 0;
+// Get a full object.
+s3Client.getObject('my-bucketname', 'my-objectname', function(e, dataStream) {
+if (e) {
+return console.log(e)
+}
+dataStream.on('data', function(chunk) {
+size += chunk.length
+});
+dataStream.on('end', function() {
+console.log("End. Total size = " + size)
+});
+dataStream.on('error', function(e) {
+console.log(e)
+});
+});  
+					 
+		
+	   					</code>
+	   					</pre> 
+					
+	   				 <div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
+	    					<h2> Additional ways to Get an Object from S3  </h2>
+	    					<p> There are many additional ways to Get an Object from S3. See table below : </p>
+						
+	   						<table class="table table-bordered table-striped table-info">
+	   						<tbody>
+	   						    <tr>
+	   						      <td>Create a New Bucket </td>
+	 						      <td>	  
+									  <p> makeBucket(bucket, acl, region, cb) </p>	 
+									  <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>  
+	s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+	if (e) {
+	return console.log(e)
+	}
+	console.log("Success")
+	});</code> </pre> </td>
+	   						    </tr>
+	   						    
+	   						    <tr>
+	   						      <td> </td>
+	   						      <td> </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> </td>
+	   						      <td> </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> </td>
+	   						      <td> </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> </td>
+	   						      <td> </td>
+	   						    </tr>
+	   						    <tr>
+	   						      <td> </td>
+	   						      <td> </td>
+	   						    </tr>
+	   						  </tbody>
+	   						</table>
+	   				</div>
+	   				</div>
+	   			</div>
+				 			  
+	            </section>
+
+			<!-- STEP 5 ########################## make this better with vertical lines connecting #s -->
+		   
+			<section>	   
+				 
+			    <div class="row">
+		  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+						 <span class="fa-stack fa-2x">
+					     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+					     <strong class="fa-stack-1x text-muted">5</strong>				 
+					   	 </span>    
+					</div>
+
+					<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+					<h2> Put Objects  </h2>
+					<p> Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events.  . </p>
+					 <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>var Minio = require('minio')
+var Fs = require('fs')
+
+var s3Client = new Minio({
+  endPoint: 's3.amazonaws.com',
+  accessKey: 'YOUR-ACCESSKEYID',
+  secretKey: 'YOUR-SECRETACCESSKEY'
+})
+
+ 
+var file = 'my-testfile.ogg'
+var fileStream = Fs.createReadStream(file)
+var fileStat = Fs.stat(file, function(e, stat) {
+  if (e) {
+    return console.log(e)
+  }
+  s3Client.putObject('my-bucketname', 'my-objectname.ogg', fileStream, stat.size, 'audio/ogg', function(e) {
+    if (e) {
+      return console.log(e)
+    }
+    console.log("Successfully uploaded the stream")
+  })
+})
+ 
+
+					</code>
+					</pre> 
+					
+					
+				
+				 
+					
+				 <div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
+ 					<h2> Additional ways to Put an Object into S3  </h2>
+ 					<p> There are many additional ways to Put an Object. See table below : </p>
+						
+						<table class="table table-bordered table-striped table-info">
+						  <tbody>
+   						    <tr>
+   						      <td>Create a New Bucket </td>
+ 						    	  <td>	  
+								  <p> makeBucket(bucket, acl, region, cb) </p>	 
+								  <pre class="prettyprint linenums lang-jsx" data-lang="" data-name="" data-highlight="" data-resize="false"><code>  
+s3Client.makeBucket('my-bucketname', 'public-read', 'us-west-1', function(e) {
+if (e) {
+return console.log(e)
+}
+console.log("Success")
+});</code> </pre> 
+								</td>
+   						    </tr> 
+						    <tr>
+						      <td> </td>
+						      <td> </td>
+						    </tr>
+						    <tr>
+						      <td> </td>
+						      <td> </td>
+						    </tr>
+						    <tr>
+						      <td>   </td>
+						      <td>   </td>
+						    </tr>
+						    <tr>
+						      <td> </td>
+						      <td> </td>
+						    </tr>
+						    <tr>
+						      <td> <td>
+						      <td> </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>	
+				 </div>
+				</div>
+		    </section>
+          
+		  	<!-- STEP 6 : Next Steps ########################## make this better with vertical lines connecting #s -->
+  			<section>	   
+		 
+  			    <div class="row">
+  		  			<div class="col-sm-2 col-md-1 col-lg-1" style="margin-top:5px;">	
+  						 <span class="fa-stack fa-2x">
+  					     <i class="fa fa-circle-o fa-stack-2x text-muted"></i>
+  					     <strong class="fa-stack-1x text-muted">6</strong>				 
+  					   	 </span>    
+  					</div>
+
+  					<div class="col-sm-10  col-md-11 col-lg-11" style="margin-top:-50px; padding-left:15px;" >
+  					<h2>  Next Steps  </h2>
+  					<p> Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events.  . </p>
+  					 
+		
+		 
+			
+  				 
+  						 
+  					</div>	
+  				 </div>
+  				</div>
+  		    </section>
+		  
+		  
+		  
+         </article>
+         <!-- END Main content -->
+       </div>
+     </main>
+
+
+     <!-- Footer -->
+     <footer class="site-footer">
+       <div class="container">
+         <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+         <div class="row">
+           <div class="col-md-6 col-sm-6">
+             <p>Copyright Minio &copy; 2015. All right reserved</p>
+           </div>
+           <div class="col-md-6 col-sm-6">
+             <ul class="footer-menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="minio_about.html">About</a></li>
+               <li><a href="mailto:hello@minio.io">Contact us</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </footer>
+     <!-- END Footer -->
+
+     <!-- Scripts -->
+     <script src="assets/js/theDocs.all.min.js"></script>
+     <script src="assets/js/custom.js"></script>
+	 <script src="assets/js/prism.js"></script>
+
+   </body>
+ </html>
+ 
