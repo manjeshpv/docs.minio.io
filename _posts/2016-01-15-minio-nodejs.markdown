@@ -15,8 +15,11 @@ permalink: minio-nodejs
 
 Minio Node.js API can be installed with npm on the command line.
 
-     $ npm install minio --save
-    					 
+ <pre><code class="javascript">
+	  $ npm install minio --save 
+ </code></pre>
+ 	
+   			 
 
 ##2. SetUp
 
@@ -52,7 +55,7 @@ Minio Node.js API can be installed with npm on the command line.
      });
 
     					 
-### Additional Bucket Operations
+#### Additional Bucket Operations
 
   >> Table here
 
@@ -78,7 +81,7 @@ Minio Node.js API can be installed with npm on the command line.
      });  
 
      	   					 
-### Additional ways to Get an Object from S3
+#### Additional ways to Get an Object from S3
 
   >>Table here
 
@@ -109,9 +112,8 @@ Minio Node.js API can be installed with npm on the command line.
        })
      })
 
-     					<div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
-
-## Additional ways to Put an Object into S3
+     				 
+#### Additional ways to Put an Object into S3
 
   >> Table Here
 
