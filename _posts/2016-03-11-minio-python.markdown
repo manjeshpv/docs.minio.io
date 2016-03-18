@@ -55,7 +55,7 @@ permalink: minio-python
 				  
  			  </td>
  			  <td>
- 				  <a href="minio-java-recipes.html"> Go to Recipes </a>
+ 				  <a href="minio-python-recipes.html"> Go to Recipes </a>
  			  </td>
  	   	</tr>	
 		
@@ -66,7 +66,7 @@ permalink: minio-python
 				  
  			  </td>
  			  <td>
- 				  <a href="minio-java-fulleg.html"> Go to Full Examples </a>
+ 				  <a href="minio-python-fulleg.html"> Go to Full Examples </a>
  			  </td>
  	   	</tr>
 		
@@ -77,7 +77,7 @@ permalink: minio-python
 				   
  			  </td>
  			  <td>
- 				  <a href="minio-java-apis.html"> Go to API Reference </a>
+ 				  <a href="minio-python-apis.html"> Go to API Reference </a>
  			  </td>
  	   	</tr>
 		     

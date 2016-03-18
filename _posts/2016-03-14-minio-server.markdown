@@ -14,15 +14,10 @@ permalink: minio-server
  
 ##1. Install
 
-<!-- Rushan : All code blocks must be copyable and pasteable. Please use black screens for code blocks like prism.js (twilight) does? -->
  
-    					 
-
-##2. SetUp
-
   
     					 
-###3. Try it Out
+##2. Example
 
 Play here in our play.minio.io server
  

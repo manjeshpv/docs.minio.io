@@ -40,42 +40,54 @@ You can directly download the JAR file <a href="http://repo1.maven.org/maven2/io
 
  
 	import io.minio.MinioClient;
-	import io.minio.errors.ClientException;
-	import io.minio.messages.ListAllMyBucketsResult;
+	import io.minio.messages.Bucket;
+	import io.minio.errors.MinioException;
+	import java.util.Iterator;
+	import java.util.List;
+	import java.io.IOException;
+	import java.security.NoSuchAlgorithmException;
+	import java.security.InvalidKeyException;
 	import org.xmlpull.v1.XmlPullParserException;
 
-	import java.io.IOException;
-
 	public class HelloListBuckets {
-    	public static void main(String[] args) throws IOException, XmlPullParserException, ClientException {
-        	// Set s3 endpoint, region is calculated automatically
-        	Client minioClient = new MinioClient("play.minio.io:9000", "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
+	    public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException,  XmlPullParserException, MinioException {
 
-        	// list buckets
-        	Iterator<Bucket> bucketList = minioClient.listBuckets();
-        	while (bucketList.hasNext()) {
-            	Bucket bucket = bucketList.next();
-            	System.out.println(bucket.getName());
-        	}
-    	}
+	        // Create a minioClient with the Minio Server name, Port, ACCESS KEY and SECRET KEY
+	        MinioClient minioClient = new MinioClient("play.minio.io",9002, "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
+
+	        // list buckets
+	        List<Bucket> bucketList = minioClient.listBuckets();
+	        Iterator<Bucket> bucketIterator = bucketList.iterator();
+
+	        while (bucketIterator.hasNext()) {
+	            Bucket bucket = bucketIterator.next();
+	            System.out.println(bucket.name());
+	        }
+	    }
 	}
+	~
 
 #### Running the above example
 
  
-
+<!-- Rushan : Please format. It looks really bad right now. -->
 	  
 Compile the above snippet by typing in your terminal 
 	  
-	  javac HelloListBuckets.java
+	   javac -cp "minio-1.0.1-all.jar"  HelloListBuckets.java
 
 Run the above snipper by typing in your terminal 
 
-	 java HelloListBuckets
+	   java HelloListBuckets
 	 
 Results should look like this :
 			
-				 TBD : drop them into go repl if Available. And show the output results.
+				> java HelloListBuckets
+           productimages-bucket
+           marketingimages-bucket
+           testbucket
+	       logfiles-bucket
+				 
 		 
 
 ##3. Next Steps : Explore Further
@@ -94,7 +106,7 @@ Results should look like this :
 				  
  			  </td>
  			  <td>
- 				  <a href="minio-java-recipes.html"> Go to Recipes </a>
+ 				  <a href="minio-java-recipes.html" class="btn btn-primary"> Recipes </a>
  			  </td>
  	   	</tr>	
 		
@@ -105,7 +117,7 @@ Results should look like this :
 				  
  			  </td>
  			  <td>
- 				  <a href="minio-java-fulleg.html"> Go to Full Examples </a>
+ 				  <a href="minio-java-fulleg.html" class="btn btn-primary" > Full Examples </a>
  			  </td>
  	   	</tr>
 		
@@ -116,7 +128,7 @@ Results should look like this :
 				   
  			  </td>
  			  <td>
- 				  <a href="minio-java-apis.html"> Go to API Reference </a>
+ 				  <a href="minio-java-apis.html" class="btn btn-primary">  API Reference </a>
  			  </td>
  	   	</tr>
 		     
