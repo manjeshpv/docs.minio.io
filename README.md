@@ -1,4 +1,4 @@
-Jekyll Bootstrap Doc
+Minio Docs Site
 ====================
 
-http://mistic100.github.io/jekyll-bootstrap-doc
+This is the minio docs site

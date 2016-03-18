@@ -11,111 +11,88 @@ permalink: minio-golang
  
 # Minio Golang Quick Start
 
+
  
 ##1. Install
+<!-- Rushan : All code blocks must be copyable and pasteable. Please use black screens for code blocks like prism.js (twilight) does? -->
+ 
+	$ go get github.com/minio/minio-go
+ 				 
 
-Minio Node.js API can be installed with npm on the command line.
+##2. Example
 
-     $ npm install minio --save
-    					 
+ 
+	package main
 
-##2. SetUp
+    import (
+     "log"
+     "github.com/minio/minio-go"
+    )
 
- To use the Minio Node.js module in your application, just require the Node client library. Initialize an s3client object with the minio SDK to directly access your AWS S3 by setting up your keys like shown below.
+    func main() {
+     // Requests are always secure (HTTPS) by default. Set insecure=true to enable insecure (HTTP) access.
+     // This boolean value is the last argument for New().
 
-     var Minio = require('minio'); 
-     var s3client = new Minio({
-     	endPoint:  's3.amazonaws.com',
-     	accessKey: 'YOUR-ACCESSKEYID',
-     	secretKey: 'YOUR-SECRETACCESSKEY'
-     });
-
-    					 
-
-##3. List Buckets
-
- After you have initialized and setup your s3client with the minio SDK, you can use it get a list of all your S3 buckets with the listBuckets() API. Retrieve the list of your S3 buckets by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method.
-
-      s3client.listBuckets(function(e, bucketStream) {
-       if (e) {
-         console.log(e)
-         return
-       }
-       bucketStream.on('data', function(obj) {
-         console.log(obj)
-       });
-       bucketStream.on('end', function() {
-         console.log("End")
-       });
-       bucketStream.on('error', function(e) {
-         console.log("Error", e)
-       });
-     });
-
-    					 
-### Additional Bucket Operations
-
-  >> Table here
-
-## 4.Get Objects
-
- Once you have successfully initialized your s3client with the minio SDK, you can use it get a specific object from a specific bucket with the getObject() API. Retrieve your objects by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method. You can even compute the size.
-
-     var size = 0;
-     // Get a full object.
-     s3Client.getObject('my-bucketname', 'my-objectname', function(e, dataStream) {
-     if (e) {
-     return console.log(e)
+     // New returns an Amazon S3 compatible client object. API copatibality (v2 or v4) is automatically
+     // determined based on the Endpoint value.
+     minioClient, err := minio.New("play.minio.io:9000", "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG", false)
+     if err != nil {
+         log.Fatalln(err)
      }
-     dataStream.on('data', function(chunk) {
-     size += chunk.length
-     });
-     dataStream.on('end', function() {
-     console.log("End. Total size = " + size)
-     });
-     dataStream.on('error', function(e) {
-     console.log(e)
-     });
-     });  
+     buckets, err := minioClient.ListBuckets()
+     if err != nil {
+         log.Fatalln(err)
+     }
+     for _, bucket := range buckets {
+         log.Println(bucket)
+     }
+    }
 
-     	   					 
-### Additional ways to Get an Object from S3
+#### Running the above example
 
-  >>Table here
+							 TBD : drop them into go repl. And show the output results.
+ 
+## 3.Next Steps : Explore Further
 
-##5. Put Objects
+ Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
 
- Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events.  .
+<!-- Rushan: Markdown Tables are looking Ugly! Let's go with HTML here Please Style. -->
 
-     var Minio = require('minio')
-     var Fs = require('fs')
-
-     var s3Client = new Minio({
-       endPoint: 's3.amazonaws.com',
-       accessKey: 'YOUR-ACCESSKEYID',
-       secretKey: 'YOUR-SECRETACCESSKEY'
-     })
-
-     var file = 'my-testfile.ogg'
-     var fileStream = Fs.createReadStream(file)
-     var fileStat = Fs.stat(file, function(e, stat) {
-       if (e) {
-         return console.log(e)
-       }
-       s3Client.putObject('my-bucketname', 'my-objectname.ogg', fileStream, stat.size, 'audio/ogg', function(e) {
-         if (e) {
-           return console.log(e)
-         }
-         console.log("Successfully uploaded the stream")
-       })
-     })
-
-     					<div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
-
-## Additional ways to Put an Object into S3
-
-  >> Table Here
-
-## 6.Next Steps
-
- Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events. 
+<table class="table table-bordered table-striped table-info">
+	 
+ 	<tbody>
+ 	   	<tr>
+ 		      <td> Recipes </td>
+ 		      <td>	  
+ 				  <p> These will help you small specific examples of code to speed up your development  </p>	 
+				  
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-golang-recipes.html"> Go to Recipes </a>
+ 			  </td>
+ 	   	</tr>	
+		
+ 	   	<tr>
+ 		      <td> Full Examples </td>
+ 		      <td>	  
+ 				  <p> These are full blown examples for you to get started </p>	 
+				  
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-golang-fulleg.html"> Go to Full Examples </a>
+ 			  </td>
+ 	   	</tr>
+		
+ 	   	<tr>
+ 		      <td> API Reference </td>
+ 		      <td>	  
+ 				  <p>Full List of Minio's API methods </p>	 
+				   
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-golang-apis.html"> Go to API Reference </a>
+ 			  </td>
+ 	   	</tr>
+		     
+ 	   </tbody>
+ </table>  

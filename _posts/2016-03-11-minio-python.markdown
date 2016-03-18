@@ -8,113 +8,79 @@ css: css/poole
 permalink: minio-python 
 ---
  
+ 
 # Minio Python Quick Start
 
  
 ##1. Install
+<!-- Rushan : All code blocks must be copyable and pasteable. Please use black screens for code blocks like prism.js (twilight) does? -->
 
-Minio Node.js API can be installed with npm on the command line.
+#### Install with pip
+    
+	$ pip install minio		 
 
-     $ npm install minio --save
-    					 
+##2. Example
 
-##2. SetUp
+	from minio import Minio
 
- To use the Minio Node.js module in your application, just require the Node client library. Initialize an s3client object with the minio SDK to directly access your AWS S3 by setting up your keys like shown below.
+	# Instantiate a client
+	minoClient = Minio('play.minio.io:9000',
+	                access_key='Q3AM3UQ867SPQQA43P2F',
+	                secret_key='zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG')
 
-     var Minio = require('minio'); 
-     var s3client = new Minio({
-     	endPoint:  's3.amazonaws.com',
-     	accessKey: 'YOUR-ACCESSKEYID',
-     	secretKey: 'YOUR-SECRETACCESSKEY'
-     });
+	# List buckets
+	buckets = minioClient.list_buckets()
+	for bucket in buckets:
+	    print('bucket:', bucket.name, bucket.creation_date)
+ 
 
-    					 
+#### Running the above example
 
-##3. List Buckets
+    		>> Drop them into a REPL and show output here
+						     					 
+ 
+## 3.Next Steps : Explore Further
 
- After you have initialized and setup your s3client with the minio SDK, you can use it get a list of all your S3 buckets with the listBuckets() API. Retrieve the list of your S3 buckets by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method.
+ Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
 
-      s3client.listBuckets(function(e, bucketStream) {
-       if (e) {
-         console.log(e)
-         return
-       }
-       bucketStream.on('data', function(obj) {
-         console.log(obj)
-       });
-       bucketStream.on('end', function() {
-         console.log("End")
-       });
-       bucketStream.on('error', function(e) {
-         console.log("Error", e)
-       });
-     });
+<!-- Rushan: Markdown Tables are looking Ugly! Let's go with HTML here Please Style. -->
 
-    					 
-### Additional Bucket Operations
-
-  >> Table here
-
-## 4.Get Objects
-
- Once you have successfully initialized your s3client with the minio SDK, you can use it get a specific object from a specific bucket with the getObject() API. Retrieve your objects by attaching callbacks and handling the resulting events. We can retrieve the data by using the on() method. You can even compute the size.
-
-     var size = 0;
-     // Get a full object.
-     s3Client.getObject('my-bucketname', 'my-objectname', function(e, dataStream) {
-     if (e) {
-     return console.log(e)
-     }
-     dataStream.on('data', function(chunk) {
-     size += chunk.length
-     });
-     dataStream.on('end', function() {
-     console.log("End. Total size = " + size)
-     });
-     dataStream.on('error', function(e) {
-     console.log(e)
-     });
-     });  
-
-     	   					 
-### Additional ways to Get an Object from S3
-
-  >>Table here
-
-##5. Put Objects
-
- Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events.  .
-
-     var Minio = require('minio')
-     var Fs = require('fs')
-
-     var s3Client = new Minio({
-       endPoint: 's3.amazonaws.com',
-       accessKey: 'YOUR-ACCESSKEYID',
-       secretKey: 'YOUR-SECRETACCESSKEY'
-     })
-
-     var file = 'my-testfile.ogg'
-     var fileStream = Fs.createReadStream(file)
-     var fileStat = Fs.stat(file, function(e, stat) {
-       if (e) {
-         return console.log(e)
-       }
-       s3Client.putObject('my-bucketname', 'my-objectname.ogg', fileStream, stat.size, 'audio/ogg', function(e) {
-         if (e) {
-           return console.log(e)
-         }
-         console.log("Successfully uploaded the stream")
-       })
-     })
-
-     					<div class="col-sm-10 col-md-11 col-lg-11" style="margin-top:20px;">
-
-## Additional ways to Put an Object into S3
-
-  >> Table Here
-
-## 6.Next Steps
-
- Once you have successfully initialized your s3client with the minio sdk, you can use it to put an object to a specific bucket with the putObject() API. Stream your object by attaching callbacks and handling the resulting events. 
+<table class="table table-bordered table-striped table-info">
+	 
+ 	<tbody>
+ 	   	<tr>
+ 		      <td> Recipes </td>
+ 		      <td>	  
+ 				  <p> These will help you small specific examples of code to speed up your development  </p>	 
+				  
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-python-recipes.html"> Go to Recipes </a>
+ 			  </td>
+ 	   	</tr>	
+		
+ 	   	<tr>
+ 		      <td> Full Examples </td>
+ 		      <td>	  
+ 				  <p> These are full blown examples for you to get started </p>	 
+				  
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-python-fulleg.html"> Go to Full Examples </a>
+ 			  </td>
+ 	   	</tr>
+		
+ 	   	<tr>
+ 		      <td> API Reference </td>
+ 		      <td>	  
+ 				  <p>Full List of Minio's API methods </p>	 
+				   
+ 			  </td>
+ 			  <td>
+ 				  <a href="minio-python-apis.html"> Go to API Reference </a>
+ 			  </td>
+ 	   	</tr>
+		     
+ 	   </tbody>
+ </table>
+   
