@@ -45,7 +45,7 @@ facebook:
   profileUrl:
 
 
-exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
+exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile', 'gulpfile.js', 'node_modules', 'package.json', 'less']
 
 markdown: rdiscount
 
@@ -54,3 +54,18 @@ gems:
   - jemoji
   - jekyll-redirect-from
   - jekyll-sitemap
+
+# SDK
+sdk:
+  - title: Golang
+    class: golang
+  - title: Node.js
+    class: nodejs
+  - title: Ruby
+    class: ruby
+  - title: Python
+    class: python
+  - title: Java
+    class: java
+  - title: .Net
+    class: dotnet

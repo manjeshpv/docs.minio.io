@@ -1,0 +1,80 @@
+.sdk-list {
+  margin-top: 10px;
+}
+
+.sl-item {
+  width: 280px;
+  display: inline-block;
+  background-color: #f1f1f1;
+  margin: 10px 10px 13px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 35px 40px 30px;
+
+  & > ul {
+    margin: 0;
+
+    & > li {
+      & > a {
+        padding: 5px 0;
+        display: block;
+
+        &:hover {
+          color: #337ab7;
+
+          &:before {
+            background-color: #337ab7;
+          }
+        }
+
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-right: 23px;
+          margin-left: 5px;
+          background-color: @text-color;
+        }
+      }
+    }
+  }
+
+  header {
+    font-size: @font-size-base + 3;
+    margin: 0 0 15px -2px;
+    padding-left: 35px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    &.golang {
+      .img-retina('../img/icons/go.png', '../img/icons/go@2x.png', 19px, 26px)
+    }
+
+    &.java {
+      .img-retina('../img/icons/java.png', '../img/icons/java@2x.png', 26px, 32px)
+    }
+
+    &.python {
+      .img-retina('../img/icons/python.png', '../img/icons/python@2x.png', 25px, 23px)
+    }
+
+    &.nodejs {
+      .img-retina('../img/icons/nodejs.png', '../img/icons/nodejs@2x.png', 23px, 26px)
+    }
+
+    &.dotnet {
+      .img-retina('../img/icons/dotnet.png', '../img/icons/dotnet@2x.png', 24px, 27px)
+    }
+
+    &.ruby {
+      .img-retina('../img/icons/ruby.png', '../img/icons/ruby@2x.png', 25px, 24px)
+    }
+  }
+  
+  a {
+    color: @text-color;
+  }
+}
