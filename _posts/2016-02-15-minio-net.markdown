@@ -5,7 +5,7 @@ comments: true
 categories : [minio, sdk, docs, examples]
 tags: minio docs 
 css: css/poole
-permalink: minio-net 
+permalink: minio-net
 ---
  
 # Minio .Net Quick Start
@@ -13,43 +13,101 @@ permalink: minio-net
  
 ##1. Install
 
+<!-- Rushan : All code blocks must be copyable and pasteable. Please use black screens for code blocks like prism.js (twilight) does? -->
+
+#### From NuGet
+ Run the following command in Nuget Package Manager Console
+
+     PM> Install-Package Minio
+
  
-    					 
 
-##2. SetUp
+##2. Example
 
+	using Minio;
+
+	private static MinioClient minioClient = new MinioClient("play.minio.io:9000", "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
+
+	var buckets = client.ListBuckets();
+	foreach (Bucket bucket in buckets)
+	{
+	    Console.Out.WriteLine(bucket.Name + " " + bucket.CreationDate);
+	}
+
+	
+
+#### Running the above example
  
-    					 
+Follow the steps below.
+	
+	>> Atul can you run these examples and provide the output. Is this the output on a windows m/c? 
 
-##3. List Buckets
+	$ git clone https://github.com/minio/minio-dotnet && cd minio-dotnet
+	$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+	$ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+	$ sudo apt-get update
+	$ sudo apt-get install mono-xbuild mono-complete
+	$ sudo mozroots --import --machine --sync 
+	$ sudo certmgr -ssl -m https://go.microsoft.com
+	$ sudo certmgr -ssl -m https://nugetgallery.blob.core.windows.net
+	$ sudo certmgr -ssl -m https://nuget.org
+	$ wget https://www.nuget.org/nuget.exe
+	$ mono nuget.exe update -self
+	$ mono nuget.exe restore
+	$ xbuild /t:Clean
+	$ xbuild /t:Rebuild /p:Configuration=Release
+	[edit Minio.Examples/ListBuckets.cs]
+	$ mcs /r:Minio/bin/Release/Minio.dll Minio.Examples/ListBuckets.cs
+	$ export MONO_PATH=Minio/bin/Release
+	$ mono Minio.Examples/ListBuckets.exe
+	....
 
+	 
+
+	
   
+##3. Next Steps : Explore Further
 
-    					 
-#### Additional Bucket Operations
-
-  >> Table here
-  This table must be like a collapsible accordion. So that the details don't overwhelm the learner
-
-## 4.Get Objects
+   Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
 
  
+<!-- Rushan: Markdown Tables are looking Ugly! Let's go with HTML here Please Style. -->
 
-     	   					 
-#### Additional ways to Get an Object from S3
-
-  >>Table here
-  This table must be like a collapsible accordion. So that the details don't overwhelm the learner
-
-##5. Put Objects
-
-  
-
-#### Additional ways to Put an Object into S3
-
-  >> Table Here
-  This table must be like a collapsible accordion. So that the details don't overwhelm the learner
-
-## 6.Next Steps
-
- 
+<table class="table table-bordered table-striped table-info">
+	 
+   	<tbody>
+   	   	<tr>
+   		      <td> Recipes </td>
+   		      <td>	  
+   				  <p> These will help you small specific examples of code to speed up your development  </p>	 
+				  
+   			  </td>
+   			  <td>
+   				  <a href="minio-dotnet-recipes.html"> Go to Recipes </a>
+   			  </td>
+   	   	</tr>	
+		
+   	   	<tr>
+   		      <td> Full Examples </td>
+   		      <td>	  
+   				  <p> These are full blown examples for you to get started </p>	 
+				  
+   			  </td>
+   			  <td>
+   				  <a href="minio-dotnet-fulleg.html"> Go to Full Examples </a>
+   			  </td>
+   	   	</tr>
+		
+   	   	<tr>
+   		      <td> API Reference </td>
+   		      <td>	  
+   				  <p>Full List of Minio's API methods </p>	 
+				   
+   			  </td>
+   			  <td>
+   				  <a href="minio-dotnet-apis.html"> Go to API Reference </a>
+   			  </td>
+   	   	</tr>
+		     
+   	   </tbody>
+   </table>

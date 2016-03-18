@@ -20,6 +20,8 @@ permalink: minio-client
 ##2. SetUp
 
   
+  
+  
     					 
  
 ## 3.Next Steps
