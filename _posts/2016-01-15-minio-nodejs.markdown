@@ -56,7 +56,21 @@ Minio Node.js API can be installed with npm on the command line.
  
 #### Running the above example
 
-		TBD . Need HTML on the View side to show. May need to change the above code to return an url object.
+		TBD. WE need to be able to do minioClient.public_url 
+	 
+	
+		<!doctype html>
+		<html>
+		  <body>
+		     <h1> Your URLS </h1>
+			 {{#each urls}}
+			 <p>
+			  <a href="/url/{{id}}">{{url}}</a>
+			  </p>
+			 {{/each}}
+		     
+		  </body>
+		</html>
 
  
 ##3. Next Steps : Explore Further
