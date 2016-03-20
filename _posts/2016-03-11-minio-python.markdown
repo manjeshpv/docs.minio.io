@@ -3,8 +3,6 @@ layout: post
 title:  Minio SDK Python Documentation
 comments: true
 categories : [minio, sdk, python, docs, examples]
-tags: minio docs python
-css: css/poole
 permalink: minio-python 
 ---
  
