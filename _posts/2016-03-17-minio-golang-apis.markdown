@@ -3,11 +3,11 @@ layout: post
 title:  Minio SDK Golang API Reference
 comments: true
 categories : [minio, sdk, golang, docs, examples]
-tags: minio docs golang
-css: css/poole
 permalink: minio-golang-apis
+parent: Minio SDK
+sub: golang 
+page: API
 ---
-#Golang API Reference
 
 
- Coming Soon.
+Coming Soon. 

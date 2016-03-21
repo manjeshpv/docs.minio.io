@@ -1,0 +1,29 @@
+---
+layout: post
+title: MINIO SDK
+description: Minio Docs
+permalink: minio-sdk
+---
+
+<p>Collection of self-contained libraries for S3 compatible cloud storage.</p>
+
+<div class="row sdk-list">
+
+	{% for item in site.sdk %}
+		<div class="sl-item"> 
+			<header>
+				<i class="icon-{{ item.class }}"></i>
+				{{ item.title }}
+			</header>
+			<ul class="list-unstyled">
+				<li><a href="minio-{{ item.class }}.html">Quick Start Guide</a></li>
+				<li><a href="minio-{{ item.class }}-apis.html">API</a></li>
+				<li><a href="minio-{{ item.class }}-fulleg.html">Examples</a></li>
+				<!--
+					<li><a href="minio-{{ item.class }}-recipes.html">Recipes</a></li>
+					<li><a href="minio-{{ item.class }}-bestpractice.html">Best Practice</a></li>
+				-->
+			</ul>
+		</div>
+	{% endfor %}
+</div>

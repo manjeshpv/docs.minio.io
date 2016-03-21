@@ -1,86 +1,78 @@
 ---
 layout: post
-title:  Minio Client Documentation
+title:  MINIO CLIENT
 comments: true
 categories : [minio, client, ruby, docs, examples]
-tags: minio docs ruby
-css: css/poole
 permalink: minio-client 
+sub: client 
+page: Quick Start Guide
 ---
-
- 
-# Minio Client Quick Start
 
 Minio Client (mc) provides a modern alternative to Unix commands like ls, cat, cp, sync, and diff. It supports POSIX compatible filesystems and Amazon S3 compatible cloud storage systems. It is entirely written in Golang.
 
- 
-##1. Install
+## <span>1</span> Install
 
-We have got a minio client for every OS. 
+<ul class="list-unstyled list-inline btn-action">
+    <li class="dropdown">
+        <a href="" data-toggle="dropdown" class="ba-split dropdown-toggle"><i class="fa fa-download m-r-5"></i>Download</a>
 
-### OS X
+        <ul class="dropdown-menu dm-alt">
+            {% for item in site.minioDownload %}
+                <li>
+                    <a href={{ item.downloadmc }}><i class="fa fa-{{ item.icon }} m-r-5"></i>{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </li>
+    
+    <li class="dropdown">
+        <a href="" data-toggle="dropdown" class="ba-split dropdown-toggle"><i class="fa fa-question-circle"></i> Guide</a>
 
-Download mc from  : https://dl.minio.io/client/mc/release/darwin-amd64/mc
+        <ul class="dropdown-menu dm-alt">
+            {% assign item = site.minioGuide | sort: 'order' %}
+            {% for p in item limit:6 %}
+                <li>
+                    <a href="#{{ p.tab }}" data-toggle="tab"><i class="fa fa-{{ p.icon }} m-r-5"></i>{{ p.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </li>
+</ul>
 
-Do : 		
-
-			$ chmod 755 mc
-			$ ./mc --help
-			
-### GNU/Linux	
-
-Download mc for:
-
-* 64-bit Intel from https://dl.minio.io/client/mc/release/linux-amd64/mc
-* 32-bit Intel from https://dl.minio.io/client/mc/release/linux-386/mc
-* 32-bit ARM from https://dl.minio.io/client/mc/release/linux-arm/mc
-
-Do :
-		
-		$ chmod +x mc
-		$ ./mc --help
-
-### Microsoft Windows				 
-
-Download mc for:
-
-* 64-bit from https://dl.minio.io/client/mc/release/windows-amd64/mc.exe
-* 32-bit from https://dl.minio.io/client/mc/release/windows-386/mc.exe
- 
-Do : 
-	 	
-		C:\Users\Username\Downloads> mc.exe --help
-		
-### Solaris/Illumos
-	
-Download mc from https://dl.minio.io/client/mc/release/solaris-amd64/mc	
-
-Do : 
-		
-		$ chmod 755 mc
-		$ ./mc --help
-
-### FreeBSD
-
-Download mc from https://dl.minio.io/client/mc/release/freebsd-amd64/mc
-
-	$ chmod 755 mc
-	$ ./mc --help
-
-### From Source
-
-Source installation is intended for only developers and advanced users. ‘mc update’ continuous delivery mechanism is not supported for ‘go get’ based binary builds. Please download official releases from https://minio.io/#mc.
+<div class="tab-content">
+    <!-- GNU/Linux -->
+    <div class="tab-pane fade" id="gnu-linux">
+        <pre class="m-b-10"><code class="language-bash">$ chmod +x mc
+$ ./mc --help</code></pre>
+    </div>
+    
+    <!-- OSX -->
+    <div class="tab-pane fade" id="mac-osx">
+        <pre class="m-b-10"><code class="language-bash">$ chmod 755 mc
+$ ./mc --help</code></pre>
+    </div>
+    
+    <!-- Windows -->
+    <div class="tab-pane fade" id="windows">
+        <pre class="m-b-10"><code class="language-bash">C:\Users\Username\Downloads> mc.exe --help </code></pre>
+    </div>
+    
+    <!-- Source -->
+    <div class="tab-pane fade" id="source">
+        <p>Source installation is intended for only developers and advanced users. <code>mc update</code> continuous delivery mechanism is not supported for <code>go get</code> based binary builds. Please download official releases from <a href="">https://minio.io/#mc</a></p>
+            
+        <pre class="m-b-10 m-t-10"><code class="language-bash">$ GO15VENDOREXPERIMENT=1 go get -u github.com/minio/mc</code></pre>
+    </div>
+</div> 
 
 
-	$ GO15VENDOREXPERIMENT=1 go get -u github.com/minio/mc
-
-##2. Example
+## <span>1</span> Example
 
   
  
   
     					 
  
-## 3.Next Steps : Explore Further
+## <span>3</span> Next Steps
 
   
