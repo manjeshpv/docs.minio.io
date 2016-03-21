@@ -68,4 +68,26 @@ sdk:
   - title: Java
     class: java
   - title: .Net
-    class: dotnet
+    class: net
+
+#documentation links
+docLinks:
+  - title : Minio Server
+    url   : #
+  - title : Minio Client
+    url   : #
+  - title : Minio SDK Golang
+    url   : #
+  - title : Minio SDK Node.js
+    url   : #
+  - title : Minio SDK Ruby
+    url   : #
+  - title : Minio SDK Python
+    url   : #
+  - title : Minio SDK Java
+    url   : #
+  - title : Minio SDK .Net
+    url   : #
+
+# SDK sub links
+sdkLinks: ['Quick Start Guide', 'API', 'Recipes', 'Examples', 'Best Practise']

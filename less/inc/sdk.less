@@ -18,6 +18,7 @@
       & > a {
         padding: 5px 0;
         display: block;
+        font-size: 15px;
 
         &:hover {
           color: #337ab7;
@@ -45,9 +46,12 @@
   header {
     font-size: @font-size-base + 3;
     margin: 0 0 15px -2px;
-    padding-left: 35px;
     background-position: left center;
     background-repeat: no-repeat;
+
+    i {
+      margin-right: 3px;
+    }
 
     &.golang {
       .img-retina('../img/icons/go.png', '../img/icons/go@2x.png', 19px, 26px)
@@ -65,7 +69,7 @@
       .img-retina('../img/icons/nodejs.png', '../img/icons/nodejs@2x.png', 23px, 26px)
     }
 
-    &.dotnet {
+    &.net {
       .img-retina('../img/icons/dotnet.png', '../img/icons/dotnet@2x.png', 24px, 27px)
     }
 

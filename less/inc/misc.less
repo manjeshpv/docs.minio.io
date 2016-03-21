@@ -7,7 +7,18 @@
 	& > a {
 		color: @text-color;
 	}
+
+	.dropdown-menu {
+		width: 200px;
+	}
+
+	.btn-action {
+		position: absolute;
+		top: 25px;
+		right: 100px;
+	}
 }
+
 
 /*-------------------------
   Section Title
@@ -46,9 +57,75 @@
 			background-color: #fff;
 		}
 	}
+
+	span {
+		text-transform: none;
+	}
 }
 
 
+/*-------------------------
+  Action Buttons
+--------------------------*/
+
+.btn-action {
+	margin-bottom: 35px;
+	& > li {
+		padding: 0 2px;
+		& > a {
+			display: block;
+			font-size: 14px;
+			border-radius: 3px;
+			border: 2px solid #AEBDC3;
+			.transition(all);
+			.transition-duration(300ms);
+			color: @text-color;
+			display: block;
+			background-color: #fff;
+			& > i {
+				font-size: 16px;
+				width: 15px;
+				&.fa-download,
+				&.fa-github {
+					position: relative;
+					top: 1px;
+				}
+			}
+			&:not(.ba-split) {
+				padding: 8px 12px;
+			}
+		}
+		&.highlight {
+			& > a {
+				background: #41ABE2;
+				border-color: #41ABE2;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.ba-split {
+	position: relative;
+	padding: 8px 45px 8px 12px;
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		content: '\f0d7';
+		font-family: fontAwesome;
+		width: 30px;
+		text-align: center;
+		height: 100%;
+		line-height: 37px;
+		border-left: 2px solid #AEBDC3;
+	}
+}
+
+
+/*-------------------------
+  Tab Links
+--------------------------*/
 .d-tabs {
 	margin-top: 40px;
 	margin-bottom: 35px;
@@ -89,5 +166,94 @@
 				cursor: default;
 			}
 		}
+	}
+}
+
+.s-title + .d-tabs {
+	margin-top: 0;
+}
+
+
+/*-------------------------
+  Language Icons
+--------------------------*/
+[class*="icon-"] {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 32px;
+	display: inline-block;
+	position: relative;
+	bottom: -3px;
+}
+
+.icon-golang {
+	.img-retina('../img/icons/go.png', '../img/icons/go@2x.png', 19px, 26px);
+}
+
+.icon-java {
+	.img-retina('../img/icons/java.png', '../img/icons/java@2x.png', 26px, 32px)
+}
+
+.icon-python {
+	.img-retina('../img/icons/python.png', '../img/icons/python@2x.png', 25px, 23px)
+}
+
+.icon-nodejs {
+	.img-retina('../img/icons/nodejs.png', '../img/icons/nodejs@2x.png', 23px, 26px)
+}
+
+.icon-net {
+	.img-retina('../img/icons/dotnet.png', '../img/icons/dotnet@2x.png', 24px, 27px)
+}
+
+.icon-ruby {
+	.img-retina('../img/icons/ruby.png', '../img/icons/ruby@2x.png', 25px, 24px)
+}
+
+
+/*-------------------------
+  Pre
+--------------------------*/
+pre {
+	text-align: left;
+	max-width: 900px;
+	width: 100%;
+	display: inline-block;
+	padding: 35px 42px;
+}
+
+
+/*-------------------------
+  Dropdown
+--------------------------*/
+.dropdown-menu {
+	padding: 17px 0;
+	top: -3px;
+
+	& > li {
+		&.active > a,
+		&.active > a:hover {
+			background-color: #eee;
+			color: @text-color;
+		}
+
+		& > a {
+			font-size: 16px;
+			padding: 8px 30px;
+			color: @text-color;
+
+			& > i {
+				width: 18px;
+				margin-right: 5px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.dropdown-menu-right {
+	& > li > a {
+		text-align: right;
 	}
 }
