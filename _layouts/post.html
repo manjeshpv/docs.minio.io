@@ -1,7 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 	{% include head.html %}
-	<link rel="stylesheet" href="css/prism.css">
-	<script src="js/prism.js"></script>
+	<link rel="stylesheet" href="vendors/prism/prism.css">
+
+	<script src="vendors/prism/prism.js"></script>
+	<script src="vendors/prism/prism-toolbar.js"></script>
+	<script src="vendors/prism/ZeroClipboard.min.js"></script>
 
 	<body>
 		<header class="home-link text-right">
@@ -13,7 +16,7 @@
 
 					<ul class="dropdown-menu dropdown-menu-right">
 						{% for item in site.docLinks %}
-							<li><a href={{ item.url }}>{{ item.title }}</a></li>
+							<li class="{% if page.permalink == item.url %}active{% endif %}"><a href={{ item.url }}>{{ item.title }}</a></li>
 						{% endfor %}
 					</ul>
 				</li>
@@ -23,15 +26,17 @@
 		<section class="text-center">
 			<div class="container">
 				<header>
-					<h2 class="s-title st-white">{{ page.parent }} <span>{{ page.sub }}</span></h2>
+					<h2 class="s-title st-white">{{ page.title }}</h2>
 
-					<ul class="d-tabs list-inline list-unstyled">
-						{% for item in site.sdkLinks %}
-							<li class="{% if page.page == item %}active{% endif %}">
-								<a href="">{{ item }}</a>
-							</li>
-						{% endfor %}
-					</ul>
+					{% if page.permalink != "minio-sdk" %}
+						<ul class="d-tabs list-inline list-unstyled">
+							{% for item in site.innerLinks %}
+								<li class="{% if page.page == item.title %}active{% endif %}">
+									<a href="minio-{{ page.sub }}{{ item.urlPrefix }}.html">{{ item.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
 				</header>
 
 				<div class="post">

@@ -1,51 +1,62 @@
 ---
-layout: main
-title: Documentation
-description: Minio Docs
-isHome: true
+layout: home
+title:  Minio Documentation
+comments: true
+categories : [minio, client, ruby, docs, examples]
 ---
 
 <header class="home-link text-right">
-	<a href="/"><i class="fa fa-home fa-2x"></i> </a>
+    <a href="http://minio.io"><i class="fa fa-arrow-circle-o-right fa-2x"></i> </a>
 </header>
 
 <section class="text-center">
-	<div class="container">
-		<h2 class="s-title st-white">Documentation</h2>
+    <div class="container">
+        <h2 class="s-title st-white">Documentation</h2>
 
-		<p>Minio server and client binaries are statically compiled for all major operating system distributions. Minio SDK is distributed via standard language repositories. If you did not find your OS, ARCH or language, please drop us a note on our <a target="_blank" href="https://gitter.im/minio/minio">Gitter channel</a>.</p>
+        <p style="margin-bottom: 50px;">Minio server and client binaries are statically compiled for all major operating system distributions. Minio SDK is distributed via standard language repositories. If you did not find your OS, ARCH or language, please drop us a note on our <a target="_blank" href="https://gitter.im/minio/minio">Gitter channel</a>.</p>
 
-		<ul class="d-tabs list-inline list-unstyled">
-			<li>
-				<a href="">Minio <br class="visible-xs"> Server</a>
-			</li>
-			<li class="">
-				<a href="">Minio <br class="visible-xs"> Client</a>
-			</li>
-			<li class="active">
-				<a href="">Minio <br class="visible-xs"> SDK</a>
-			</li>
-		</ul>
+        <div class="row sdk-list">
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-server"></i>
+                    Minio Server
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-server.html">Quick Start Guide</a></li>
+                    <li><a href="minio-server-apis.html">API</a></li>
+                    <li><a href="minio-server-fulleg.html">Examples</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Best Practise</a></li>
+                </ul>
+            </div>
 
-		<div class="clearfix"></div>
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-client"></i>
+                    Minio Client
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-client.html">Quick Start Guide</a></li>
+                    <li><a href="minio-client-apis.html">API</a></li>
+                    <li><a href="minio-client-fulleg.html">Examples</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Best Practise</a></li>
+                </ul>
+            </div>
 
-		<div class="row sdk-list">
-
-			{% for item in site.sdk %}
-				<div class="sl-item">
-					<header>
-						<i class="icon-{{ item.class }}"></i>
-						{{ item.title }}
-					</header>
-					<ul class="list-unstyled">
-						<li><a href="minio-{{ item.class }}.html">Quick Start Guide</a></li>
-						<li><a href="minio-{{ item.class }}-apis.html">API</a></li>
-						<li><a href="minio-{{ item.class }}-recipes.html">Recipes</a></li>
-						<li><a href="minio-{{ item.class }}-fulleg.html">Examples</a></li>
-						<li><a href="minio-{{ item.class }}-bestpractice.html">Best Practice</a></li>
-					</ul>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-sdk"></i>
+                    <a href="minio-sdk.html">Minio SDK</a>
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-golang.html">Golang</a></li>
+                    <li><a href="minio-nodejs.html">Node.js</a></li>
+                    <li><a href="minio-python.html">Python</a></li>
+                    <li><a href="minio-java.html">Java</a></li>
+                    <li><a href="minio-net.html">.Net</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>

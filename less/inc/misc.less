@@ -24,7 +24,6 @@
   Section Title
 --------------------------*/
 .s-title {
-	text-transform: uppercase;
 	font-size: 22px;
 	display: inline-block;
 	padding: 0 15px 12px;
@@ -59,7 +58,7 @@
 	}
 
 	span {
-		text-transform: none;
+		text-transform: capitalize;
 	}
 }
 
@@ -67,7 +66,6 @@
 /*-------------------------
   Action Buttons
 --------------------------*/
-
 .btn-action {
 	margin-bottom: 35px;
 	& > li {
@@ -127,8 +125,7 @@
   Tab Links
 --------------------------*/
 .d-tabs {
-	margin-top: 40px;
-	margin-bottom: 35px;
+	margin-bottom: 30px;
 
 	& > li {
 		padding: 0 2px;
@@ -211,16 +208,42 @@
 	.img-retina('../img/icons/ruby.png', '../img/icons/ruby@2x.png', 25px, 24px)
 }
 
+.icon-minio-server {
+	.img-retina('../img/icons/server.png', '../img/icons/server@2x.png', 25px, 22px)
+}
+
+.icon-minio-client {
+	.img-retina('../img/icons/client.png', '../img/icons/client@2x.png', 25px, 25px)
+}
+
+.icon-minio-sdk {
+	.img-retina('../img/icons/sdk.png', '../img/icons/sdk@2x.png', 25px, 22px)
+}
+
 
 /*-------------------------
-  Pre
+   Code
 --------------------------*/
 pre {
 	text-align: left;
-	max-width: 900px;
-	width: 100%;
-	display: inline-block;
-	padding: 35px 42px;
+	padding: 30px 40px;
+	font-size: 14px;
+	margin-bottom: 0;
+
+	&:not(.pre-alt) {
+		max-width: 820px;
+		width: 100%;
+		display: inline-block;
+	}
+
+	&.pre-alt {
+		margin: 10px -15px 0;
+		border-radius: 0 0 3px 3px;
+	}
+}
+
+code {
+	padding: 2px 8px;
 }
 
 
@@ -232,12 +255,6 @@ pre {
 	top: -3px;
 
 	& > li {
-		&.active > a,
-		&.active > a:hover {
-			background-color: #eee;
-			color: @text-color;
-		}
-
 		& > a {
 			font-size: 16px;
 			padding: 8px 30px;
@@ -256,4 +273,17 @@ pre {
 	& > li > a {
 		text-align: right;
 	}
+}
+
+
+/*-------------------------
+  Tabs
+--------------------------*/
+.tc-alt {
+	background: #f1f1f1;
+	padding: 35px 15px 0;
+	width: 100%;
+	max-width: 820px;
+	display: inline-block;
+	border-radius: 3px;
 }

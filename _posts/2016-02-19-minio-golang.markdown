@@ -1,22 +1,21 @@
 ---
 layout: post
-title:  Minio SDK Golang Documentation
+title:  MINIO SDK Golang
 comments: true
 categories : [minio, sdk, golang, docs, examples]
 permalink: minio-golang 
-parent: Minio SDK
-sub: Golang 
+sub: golang 
 page: Quick Start Guide
 ---
 
 ## <span>1</span>Install
  
-    $ go get github.com/minio/minio-go</code>
+    $ go get github.com/minio/minio-go
  				 
 
 ## <span>2</span>Example
 
-<pre><code class="language-java">package main
+<pre class="code-toolbar m-b-10"><code class="language-go">package main
     import (
         "log"
         "github.com/minio/minio-go"
@@ -47,10 +46,10 @@ page: Quick Start Guide
  		
 	
 
- Running the above example
+Running the above example
 
     TBD : drop them into go repl. And show the output results.
  
 ## <span>3</span>Next Steps : Explore Further
 
- Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
+Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
