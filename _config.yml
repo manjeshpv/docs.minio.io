@@ -91,10 +91,6 @@ docLinks:
 innerLinks:
   - title     : Quick Start Guide
     urlPrefix :
-  - title     : API
-    urlPrefix : -apis
-  - title     : Examples
-    urlPrefix : -fulleg
 
 # minio server & client
 minioDownload:
