@@ -6770,6 +6770,9 @@ button.close {
 .m-b-10 {
   margin-bottom: 10px;
 }
+.m-b-20 {
+  margin-bottom: 20px;
+}
 /*-------------------------
   Back to Home
 --------------------------*/
@@ -6793,7 +6796,7 @@ button.close {
 .s-title {
   font-size: 22px;
   display: inline-block;
-  padding: 0 15px 12px;
+  padding: 0 0 12px;
   line-height: 100%;
   margin: 0 0 50px;
   border-bottom: 2px solid #688592;
@@ -7025,7 +7028,7 @@ pre {
   margin-bottom: 0;
 }
 pre:not(.pre-alt) {
-  max-width: 820px;
+  max-width: 900px;
   width: 100%;
   display: inline-block;
 }
@@ -7088,8 +7091,14 @@ a {
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-.sl-item {
-  width: 280px;
+.c-alt {
+  max-width: 900px;
+}
+.box-list {
+  text-align: center;
+}
+.bl-item {
+  width: 275px;
   display: inline-block;
   background-color: #f1f1f1;
   margin: 10px 10px 13px;
@@ -7098,24 +7107,24 @@ a {
   padding: 25px 40px 30px;
   vertical-align: top;
 }
-.sl-item a:hover {
+.bl-item a:hover {
   color: #337ab7;
 }
-.sl-item > ul {
+.bl-item > ul {
   margin: 0;
 }
-.sl-item > ul > li > a {
+.bl-item > ul > li > a {
   padding: 5px 0;
   display: block;
   font-size: 15px;
 }
-.sl-item > ul > li > a:hover {
+.bl-item > ul > li > a:hover {
   color: #337ab7;
 }
-.sl-item > ul > li > a:hover:before {
+.bl-item > ul > li > a:hover:before {
   background-color: #337ab7;
 }
-.sl-item > ul > li > a:before {
+.bl-item > ul > li > a:before {
   content: '';
   display: inline-block;
   width: 5px;
@@ -7126,16 +7135,16 @@ a {
   margin-left: 5px;
   background-color: #496572;
 }
-.sl-item header {
+.bl-item header {
   font-size: 20px;
   margin: 0 0 15px -2px;
   background-position: left center;
   background-repeat: no-repeat;
 }
-.sl-item header i {
+.bl-item header i {
   margin-right: 3px;
 }
-.sl-item a {
+.bl-item a {
   color: #496572;
 }
 .post h2 {
@@ -7156,6 +7165,7 @@ a {
   border-radius: 50%;
   margin-right: 7px;
   height: 23px;
+  text-align: center;
 }
 .code-toolbar {
   position: relative;

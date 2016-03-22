@@ -16,16 +16,16 @@
 
 					<ul class="dropdown-menu dropdown-menu-right">
 						{% for item in site.docLinks %}
-							<li class="{% if page.permalink == item.url %}active{% endif %}"><a href={{ item.url }}>{{ item.title }}</a></li>
+							<li class="{% if page.permalink == item.url %}active{% endif %}"><a href="{{ item.url }}.html">{{ item.title }}</a></li>
 						{% endfor %}
 					</ul>
 				</li>
 			</ul>
 		</header>
 
-		<section class="text-center">
-			<div class="container">
-				<header>
+		<section>
+			<div class="container c-alt">
+				<header class="text-center">
 					<h2 class="s-title st-white">{{ page.title }}</h2>
 
 					{% if page.permalink != "minio-sdk" %}
