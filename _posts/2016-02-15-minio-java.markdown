@@ -50,11 +50,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.InvalidKeyException;
 import org.xmlpull.v1.XmlPullParserException;
 
-public class HelloListBuckets {
+public class ListMyBuckets {
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException,  XmlPullParserException, MinioException {
 
         // Create a minioClient with the Minio Server name, Port, ACCESS KEY and SECRET KEY
-        MinioClient minioClient = new MinioClient("play.minio.io",9002, "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
+        MinioClient minioClient = new MinioClient("play.minio.io",9000, "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
 
         // list buckets
         List<Bucket> bucketList = minioClient.listBuckets();
@@ -67,25 +67,25 @@ public class HelloListBuckets {
     }
 }
 ~</code></pre>
+
+
+### Running the above Example
 	  
 Compile the above snippet by typing in your terminal 
 	  
-<pre class="code-toolbar m-b-10"><code class="language-java">javac -cp "minio-1.0.1-all.jar"  HelloListBuckets.java</code></pre>
+<pre class="code-toolbar m-b-10"><code class="language-java">javac -cp "minio-1.0.1-all.jar"  ListMyBuckets.java</code></pre>
 
 Run the above snipper by typing in your terminal 
 
-<pre class="code-toolbar m-b-10"><code class="language-java">java HelloListBuckets</code></pre>
+<pre class="code-toolbar m-b-10"><code class="language-java">java ListMyBuckets</code></pre>
 	 
 Results should look like this :
 			
-<pre class="code-toolbar m-b-10"><code class="language-java">&lt; java HelloListBuckets
+<pre class="code-toolbar m-b-10"><code class="language-java">&lt; java ListMyBuckets
 productimages-bucket
 marketingimages-bucket
 testbucket
 logfiles-bucket</code></pre>
 				 
 		 
-
-## <span>3</span>Next Steps : Explore Further
-
-Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
+ 

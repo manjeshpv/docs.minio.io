@@ -45,11 +45,9 @@ page: Quick Start Guide
 }</code></pre>
  		
 	
+###Running the above example
 
-Running the above example
-
-    TBD : drop them into go repl. And show the output results.
+    TBD :   And show the output results.
+	
  
-## <span>3</span>Next Steps : Explore Further
-
-Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
+ 
