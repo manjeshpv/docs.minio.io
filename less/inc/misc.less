@@ -1,0 +1,289 @@
+/*-------------------------
+  Back to Home
+--------------------------*/
+.home-link {
+	padding: 30px 40px 0;
+
+	& > a {
+		color: @text-color;
+	}
+
+	.dropdown-menu {
+		width: 200px;
+	}
+
+	.btn-action {
+		position: absolute;
+		top: 25px;
+		right: 100px;
+	}
+}
+
+
+/*-------------------------
+  Section Title
+--------------------------*/
+.s-title {
+	font-size: 22px;
+	display: inline-block;
+	padding: 0 15px 12px;
+	line-height: 100%;
+	margin: 0 0 50px;
+	border-bottom: 2px solid #688592;
+	position: relative;
+	&:before {
+		content: '\f005';
+		font-family: fontAwesome;
+		position: absolute;
+		bottom: -8px;
+		font-size: 15px;
+		line-height: 100%;
+		width: 20px;
+		text-align: center;
+		color: #496572;
+	}
+	&:before {
+		margin-left: -10px;
+		left: 50%;
+	}
+	&.st-ace {
+		&:before {
+			background-color: #f3f3f3;
+		}
+	}
+	&.st-white {
+		&:before {
+			background-color: #fff;
+		}
+	}
+
+	span {
+		text-transform: capitalize;
+	}
+}
+
+
+/*-------------------------
+  Action Buttons
+--------------------------*/
+.btn-action {
+	margin-bottom: 35px;
+	& > li {
+		padding: 0 2px;
+		& > a {
+			display: block;
+			font-size: 14px;
+			border-radius: 3px;
+			border: 2px solid #AEBDC3;
+			.transition(all);
+			.transition-duration(300ms);
+			color: @text-color;
+			display: block;
+			background-color: #fff;
+			& > i {
+				font-size: 16px;
+				width: 15px;
+				&.fa-download,
+				&.fa-github {
+					position: relative;
+					top: 1px;
+				}
+			}
+			&:not(.ba-split) {
+				padding: 8px 12px;
+			}
+		}
+		&.highlight {
+			& > a {
+				background: #41ABE2;
+				border-color: #41ABE2;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.ba-split {
+	position: relative;
+	padding: 8px 45px 8px 12px;
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		content: '\f0d7';
+		font-family: fontAwesome;
+		width: 30px;
+		text-align: center;
+		height: 100%;
+		line-height: 37px;
+		border-left: 2px solid #AEBDC3;
+	}
+}
+
+
+/*-------------------------
+  Tab Links
+--------------------------*/
+.d-tabs {
+	margin-bottom: 30px;
+
+	& > li {
+		padding: 0 2px;
+
+		& > a {
+			display: block;
+			padding: 10px 20px;
+			border-radius: 2px;
+			color: #496572;
+			background-color: #F1F1F1;
+
+			@media(max-width: @screen-xs-max) {
+				padding: 8px 15px 7px;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+
+		&.active > a {
+			color: #fff;
+			background-color: #41ABE2;
+			position: relative;
+
+			&:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 8px 0 8px;
+				border-color: #41ace2 transparent transparent transparent;
+				content: '';
+				position: absolute;
+				bottom: -8px;
+				left: 50%;
+				margin-left: -5px;
+				cursor: default;
+			}
+		}
+	}
+}
+
+.s-title + .d-tabs {
+	margin-top: 0;
+}
+
+
+/*-------------------------
+  Language Icons
+--------------------------*/
+[class*="icon-"] {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 32px;
+	display: inline-block;
+	position: relative;
+	bottom: -3px;
+}
+
+.icon-golang {
+	.img-retina('../img/icons/go.png', '../img/icons/go@2x.png', 19px, 26px);
+}
+
+.icon-java {
+	.img-retina('../img/icons/java.png', '../img/icons/java@2x.png', 26px, 32px)
+}
+
+.icon-python {
+	.img-retina('../img/icons/python.png', '../img/icons/python@2x.png', 25px, 23px)
+}
+
+.icon-nodejs {
+	.img-retina('../img/icons/nodejs.png', '../img/icons/nodejs@2x.png', 23px, 26px)
+}
+
+.icon-net {
+	.img-retina('../img/icons/dotnet.png', '../img/icons/dotnet@2x.png', 24px, 27px)
+}
+
+.icon-ruby {
+	.img-retina('../img/icons/ruby.png', '../img/icons/ruby@2x.png', 25px, 24px)
+}
+
+.icon-minio-server {
+	.img-retina('../img/icons/server.png', '../img/icons/server@2x.png', 25px, 22px)
+}
+
+.icon-minio-client {
+	.img-retina('../img/icons/client.png', '../img/icons/client@2x.png', 25px, 25px)
+}
+
+.icon-minio-sdk {
+	.img-retina('../img/icons/sdk.png', '../img/icons/sdk@2x.png', 25px, 22px)
+}
+
+
+/*-------------------------
+   Code
+--------------------------*/
+pre {
+	text-align: left;
+	padding: 30px 40px;
+	font-size: 14px;
+	margin-bottom: 0;
+
+	&:not(.pre-alt) {
+		max-width: 820px;
+		width: 100%;
+		display: inline-block;
+	}
+
+	&.pre-alt {
+		margin: 10px -15px 0;
+		border-radius: 0 0 3px 3px;
+	}
+}
+
+code {
+	padding: 2px 8px;
+}
+
+
+/*-------------------------
+  Dropdown
+--------------------------*/
+.dropdown-menu {
+	padding: 17px 0;
+	top: -3px;
+
+	& > li {
+		& > a {
+			font-size: 16px;
+			padding: 8px 30px;
+			color: @text-color;
+
+			& > i {
+				width: 18px;
+				margin-right: 5px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.dropdown-menu-right {
+	& > li > a {
+		text-align: right;
+	}
+}
+
+
+/*-------------------------
+  Tabs
+--------------------------*/
+.tc-alt {
+	background: #f1f1f1;
+	padding: 35px 15px 0;
+	width: 100%;
+	max-width: 820px;
+	display: inline-block;
+	border-radius: 3px;
+}

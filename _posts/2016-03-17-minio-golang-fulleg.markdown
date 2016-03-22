@@ -3,36 +3,18 @@ layout: post
 title:  Minio SDK Golang Full Examples
 comments: true
 categories : [minio, sdk, golang, docs, examples]
-tags: minio docs golang
-css: css/poole
 permalink: minio-golang-fulleg
+parent: Minio SDK
+sub: golang 
+page: Examples
 ---
 
-#Golang Full Examples
- 
- 
-<table class="table table-bordered table-striped table-info">
-	 
- 	<tbody>
- 	   	<tr>
- 		      <td> Golang Music Player App </td>
- 		      <td>	  
- 				  <p> This is a Ruby on Rails Shopping Application. It will use the Ruby SDK to get product images from AWS S3. </p>	 
-				  
- 			  </td>
-			  <td>	
-				  <a href="" class="btn btn-primary"> Download the App </a>
-				   
-			  </td>
-			  <td>
-				 <a href="" class="btn btn-primary"> Get the Code </a>
-			  </td>
- 			  
-			  
- 	   	</tr>
-		 
-		
- 	    
-		     
- 	   </tbody>
- </table> 
+## Golang Music Player App
+This is a Ruby on Rails Shopping Application. It will use the Ruby SDK to get product images from AWS S3.
+
+<br/>
+
+<ul class="btn-action list-unstyled list-inline">
+    <li><a href=""><i class="fa fa-download"></i> <span class="hidden-xs m-l-5">Download the App</span></a></li>
+    <li><a href=""><i class="fa fa-code"></i> <span class="hidden-xs m-l-5">Get the Code</span></a></a></li>
+</ul>

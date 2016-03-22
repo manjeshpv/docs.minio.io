@@ -11,3 +11,5 @@ permalink: minio-nodejs-bestpractice
 #Node JS Best Practices
 
 Coming Soon
+
+<!-- Rushan can you make a nice coming soon placeholder we can put for now and publish the site? >

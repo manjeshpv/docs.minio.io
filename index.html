@@ -1,85 +1,62 @@
 ---
-layout: def
-title: Documentation
-description: Minio Docs
-isHome: true
+layout: home
+title:  Minio Documentation
+comments: true
+categories : [minio, client, ruby, docs, examples]
 ---
 
-        <!-- Main content -->
-        <article class="col-md-9 col-sm-9 main-content" role="main">
-          
-          <header>
-            <h2>Minio SDK </h2>
-            
-          <section>
-			 <ul class="grid-view view-col-2">
-			   <li>
-			    
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">Node.js</a></h5>
-				      <p style="margin-left: 30px;"><a href="minio-nodejs.html"> Quick Start Guide </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-nodejs-recipes.html"> Recipes </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-nodejs-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-nodejs-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-nodejs-bestpractice.html"> Best Practices </a></p>
-					  
-					   
-					 
-			   </li>
+<header class="home-link text-right">
+    <a href="http://minio.io"><i class="fa fa-arrow-circle-o-right fa-2x"></i> </a>
+</header>
 
-			   <li>
-			     <h6></h6>
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">Ruby</a></h5>
-  				      <p style="margin-left: 30px;"><a href="minio-ruby.html"> Quick Start Guide </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-ruby-recipes.html"> Recipes </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-ruby-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-ruby-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-ruby-bestpractice.html"> Best Practices </a></p>
-			   </li>
+<section class="text-center">
+    <div class="container">
+        <h2 class="s-title st-white">Documentation</h2>
 
-			   <li>
-			     <h6>   </h6>
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">Java</a></h5>
-				      <p style="margin-left: 30px;"><a href="minio-java.html"> Quick Start Guide </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-java-recipe.html"> Recipes </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-java-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-java-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-java-bestpractice.html"> Best Practices </a></p>
-			   </li>
-			   <li>
-			     <h6>   </h6>
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">.NET</a></h5>
-				      <p style="margin-left: 30px;"><a href="minio-net.html"> Quick Start Guide </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-net-recipes.html"> Recipes </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-net-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-net-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-net-bestpractice.html"> Best Practices </a></p>
-			   </li>
-			   <li>
-			     <h6>   </h6>
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">Python</a></h5>
-  				      <p style="margin-left: 30px;"><a href="minio-python.html"> Quick Start Guide </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-python-recipes.html"> Recipes </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-python-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-python-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-python-bestpractice.html"> Best Practices </a></p>
-			   </li>
-			   <li>
-			     <h6>   </h6>
-			     <h5><a href="#" style="color: #3f5762; font-size: 1.3em; font-weight: bold;">Golang</a></h5>
-  				      <p style="margin-left: 30px;"><a href="minio-golang.html"> Quick Start Guide </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-golang-recipe.html"> Recipes </a></p>
-  					  <p style="margin-left: 30px;"><a href="minio-golang-fulleg.html"> Examples </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-golang-apis.html"> API Reference </a></p>
-					  <p style="margin-left: 30px;"><a href="minio-golang-bestpractice.html"> Best Practices </a></p>
-			   </li>
-	 		  </ul>
-			</section>
-          </header>
+        <p style="margin-bottom: 50px;">Minio server and client binaries are statically compiled for all major operating system distributions. Minio SDK is distributed via standard language repositories. If you did not find your OS, ARCH or language, please drop us a note on our <a target="_blank" href="https://gitter.im/minio/minio">Gitter channel</a>.</p>
 
-         
-         
+        <div class="row sdk-list">
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-server"></i>
+                    Minio Server
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-server.html">Quick Start Guide</a></li>
+                    <li><a href="minio-server-apis.html">API</a></li>
+                    <li><a href="minio-server-fulleg.html">Examples</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Best Practise</a></li>
+                </ul>
+            </div>
 
-          
-        </article>
-        <!-- END Main content -->
-      </div> 
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-client"></i>
+                    Minio Client
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-client.html">Quick Start Guide</a></li>
+                    <li><a href="minio-client-apis.html">API</a></li>
+                    <li><a href="minio-client-fulleg.html">Examples</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Best Practise</a></li>
+                </ul>
+            </div>
+
+            <div class="sl-item">
+                <header>
+                    <i class="icon-minio-sdk"></i>
+                    <a href="minio-sdk.html">Minio SDK</a>
+                </header>
+                <ul class="list-unstyled">
+                    <li><a href="minio-golang.html">Golang</a></li>
+                    <li><a href="minio-nodejs.html">Node.js</a></li>
+                    <li><a href="minio-python.html">Python</a></li>
+                    <li><a href="minio-java.html">Java</a></li>
+                    <li><a href="minio-net.html">.Net</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

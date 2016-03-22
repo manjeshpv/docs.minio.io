@@ -45,7 +45,7 @@ facebook:
   profileUrl:
 
 
-exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
+exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile', 'gulpfile.js', 'node_modules', 'package.json', 'less']
 
 markdown: rdiscount
 
@@ -54,3 +54,109 @@ gems:
   - jemoji
   - jekyll-redirect-from
   - jekyll-sitemap
+
+# SDK
+sdk:
+  - title: Golang
+    class: golang
+  - title: Node.js
+    class: nodejs
+  - title: Python
+    class: python
+  - title: Java
+    class: java
+  - title: .Net
+    class: net
+
+#documentation links
+docLinks:
+  - title : Minio Server
+    url   : minio-server
+  - title : Minio Client
+    url   : minio-client
+  - title : Minio SDK
+    url   : minio-sdk
+  - title : Minio SDK Golang
+    url   : minio-golang
+  - title : Minio SDK Node.js
+    url   : minio-nodejs
+  - title : Minio SDK Python
+    url   : minio-python
+  - title : Minio SDK Java
+    url   : minio-java
+  - title : Minio SDK .Net
+    url   : minio-net
+
+# inner links [more to come: Recipies & Best Practices]
+innerLinks:
+  - title     : Quick Start Guide
+    urlPrefix :
+  - title     : API
+    urlPrefix : -apis
+  - title     : Examples
+    urlPrefix : -fulleg
+
+# minio server & client
+minioDownload:
+  - title      : GNU/Linux x64
+    downloadms : https://dl.minio.io/server/minio/release/linux-amd64/minio
+    downloadmc : https://dl.minio.io/client/mc/release/linux-amd64/mc
+    icon       : linux
+  - title      : GNU/Linux x32
+    downloadms : https://dl.minio.io/server/minio/release/linux-386/minio
+    downloadmc : https://dl.minio.io/client/mc/release/linux-386/mc
+    icon       : linux
+  - title      : GNU/Linux A32
+    downloadms : https://dl.minio.io/server/minio/release/linux-arm/minio
+    downloadmc : https://dl.minio.io/client/mc/release/linux-arm/mc
+    icon       : linux
+  - title      : Mac OSX x64
+    downloadms : https://dl.minio.io/server/minio/release/darwin-amd64/minio
+    downloadmc : https://dl.minio.io/client/mc/release/darwin-amd64/mc
+    icon       : apple
+  - title      : Windows x64
+    downloadms : https://dl.minio.io/server/minio/release/windows-amd64/minio.exe
+    downloadmc : https://dl.minio.io/client/mc/release/windows-amd64/mc.exe
+    icon       : windows
+  - title      : Windows x32
+    downloadms : https://dl.minio.io/server/minio/release/windows-386/minio.exe
+    downloadmc : https://dl.minio.io/client/mc/release/windows-386/mc.exe
+    icon       : windows
+  - title      : Solaris x64
+    downloadms :
+    downloadmc : https://dl.minio.io/client/mc/release/solaris-amd64/mc
+    icon       : cube
+  - title      : FreeBSD x64
+    downloadms :
+    downloadmc : https://dl.minio.io/client/mc/release/freebsd-amd64/mc
+    icon       : cube
+
+minioGuide:
+  - title    : GNU/Linux
+    tab      : gnu-linux
+    icon     : linux
+    order    : 1
+  - title    : Mac OSX
+    tab      : mac-osx
+    icon     : apple
+    order    : 2
+  - title    : Windows
+    tab      : windows
+    icon     : windows
+    order    : 3
+  - title    : Docker Container
+    tab      : docker
+    icon     : cube
+    order    : 7
+  - title    : From Source
+    tab      : source
+    icon     : cube
+    order    : 6
+  - title    : Solaris
+    tab      : mac-osx
+    icon     : cube
+    order    : 4
+  - title    : FreeBSD
+    tab      : mac-osx
+    icon     : cube
+    order    : 5
