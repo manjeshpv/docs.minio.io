@@ -10,6 +10,23 @@ page: Quick Start Guide
 
 Minio Client (mc) provides a modern alternative to Unix commands like ls, cat, cp, sync, and diff. It supports POSIX compatible filesystems and Amazon S3 compatible cloud storage systems. It is entirely written in Golang.
 
+mc implements the following commands
+
+  ls        List files and folders.
+  mb        Make a bucket or folder.
+  cat       Display contents of a file.
+  pipe      Write contents of stdin to one or more targets. When no target is specified, it writes to stdout.
+  share     Generate URL for sharing.
+  cp        Copy one or more objects to a target.
+  mirror    Mirror folders recursively from a single source to many destinations.
+  diff      Compute differences between two folders.
+  rm        Remove file or bucket [WARNING: Use with care].
+  access    Manage bucket access permissions.
+  session   Manage saved sessions of cp and mirror operations.
+  config    Manage configuration file.
+  update    Check for a new software update.
+  version   Print version.
+
 ## <span>1</span> Install
 
 <ul class="list-unstyled list-inline btn-action">
@@ -68,11 +85,59 @@ $ ./mc --help</code></pre>
 
 ## <span>1</span> Example
 
+
   
+- Get your AccessKeyID and SecretAccessKey by following AWS Credentials Guide.
+
+- Once you have them update your ~/.mc/config.json configuration file.
+
+
+How to use mc commands
+----------------------
+
+	>mc ls
+	>mc mb
+	>mc cat
+	>mc rm
+
+ >> (Same format as configure )
+	
+	
+	
+How to configure mc for Amazon S3   
+---------------------------------
+
+
  
-  
-    					 
+ 		
+		$ mc config host add <ALIAS> <YOUR-S3-ENDPOINT> <YOUR-ACCESS-KEY> <YOUR-SECRET-KEY> S3v4
+			
+Example
+
+	$ mc config host add mys3 https://s3.amazonaws.com BKIKJAA5BMMU2RHO6IBB V7f1CwQqAcwo80UEIJEjc5gVQUSSx5ohQ9GSrr12
+
+   >> output
+   
+NOTE: S3v4 is default if not specified.
+
+
+How to mirror using mc
+----------------------
+		
+>> Atul can you fill this out similar to above.
+
+
+How to do a diff on my content using mc diff
+---------------------------------------------
+	
+>> Atul can you fill this out similar to above.				 
  
 ## <span>3</span> Next Steps
 
-  
+ Minio Server : Minio is an open source object storage server that stores objects such as photos, videos, log files, backups, container / VM images and so on. Minio is best suited for storing blobs of information ranging from KBs to TBs each.  <a href="minio-sdk.html">Minio Server </a>
+ 
+ Minio SDK : 
+
+ Need to use Minio's functionality inside your programs? Please explore our available SDKs. <a href="minio-sdk.html">Minio SDK </a>
+
+ 

@@ -57,7 +57,7 @@ if (e)
 });</code></pre>
  
  
-Running the above example
+###Running the above example
 <pre class="code-toolbar"><code class="language-html">TBD. WE need to be able to do minioClient.public_url 
 
 &lt;!doctype html&gt;
@@ -75,6 +75,4 @@ Running the above example
 &lt;/html&gt;</code></pre> 
 
  
-## <span>3</span> Next Steps : Explore Further
-
-Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
+ 
