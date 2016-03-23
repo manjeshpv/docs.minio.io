@@ -29,9 +29,8 @@ page: Quick Start Guide
     <div class="tab-pane fade" id="gradle">
         <pre class="code-toolbar"><code class="language-java">dependencies {
     compile 'io.minio:minio:1.0.1'
-}</code></pre>     
+}</code></pre>
     </div>
-    
     <div class="tab-pane fade" id="jar">
         You can directly download the JAR file <a href="http://repo1.maven.org/maven2/io/minio/minio/1.0.1/">here</a> and include it in your java or android project.	 
     </div>
@@ -54,7 +53,7 @@ public class ListMyBuckets {
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException, InvalidKeyException,  XmlPullParserException, MinioException {
 
         // Create a minioClient with the Minio Server name, Port, ACCESS KEY and SECRET KEY
-        MinioClient minioClient = new MinioClient("play.minio.io",9000, "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
+        MinioClient minioClient = new MinioClient("play.minio.io", 9000, "Q3AM3UQ867SPQQA43P2F", "zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG");
 
         // list buckets
         List<Bucket> bucketList = minioClient.listBuckets();
@@ -79,13 +78,25 @@ Run the above snipper by typing in your terminal
 
 <pre class="code-toolbar m-b-10"><code class="language-java">java ListMyBuckets</code></pre>
 	 
-Results should look like this :
-			
-<pre class="code-toolbar m-b-10"><code class="language-java">&lt; java ListMyBuckets
+Results should look like this :			
+<pre class="code-toolbar m-b-10"><code class="language-java">
 productimages-bucket
 marketingimages-bucket
 testbucket
 logfiles-bucket</code></pre>
 				 
 		 
- 
+## <span>3</span> Next Steps : Explore Further
+
+<table class="table table-bordered">
+<tbody>
+	<tr>
+	 <td>Bundle the Minio Cloud Storage Server with your Application Stack. </td>
+	 <td><a href="minio-client.html"> Go to Minio Server</a></td>
+	</tr>
+	<tr>
+	 <td>Need Minio functionality inside your applications / programs? </td>
+	 <td><a href="minio-sdk.html">Go to Minio SDK</a></td>
+	</tr> 
+</tbody>
+</table>
