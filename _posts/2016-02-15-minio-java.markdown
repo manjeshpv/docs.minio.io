@@ -18,7 +18,7 @@ page: Quick Start Guide
 
 <div class="tab-content">
     <div class="tab-pane active fade in" id="maven">
-        <pre class="code-toolbar"><code class="language-markup">&lt;dependency&gt;
+        <pre class="code-toolbar"><code class="language-java">&lt;dependency&gt;
     &lt;groupId&gt;io.minio&lt;/groupId&gt;
     &lt;artifactId&gt;minio&lt;/artifactId&gt;
     &lt;artifactId&gt;minio&lt;/artifactId&gt;
@@ -92,7 +92,7 @@ logfiles-bucket</code></pre>
 <tbody>
 	<tr>
 	 <td>Bundle the Minio Cloud Storage Server with your Application Stack. </td>
-	 <td><a href="minio-client.html"> Go to Minio Server</a></td>
+	 <td><a href="minio-server.html"> Go to Minio Server</a></td>
 	</tr>
 	<tr>
 	 <td>Need Minio functionality inside your applications / programs? </td>

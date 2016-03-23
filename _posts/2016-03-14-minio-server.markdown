@@ -8,9 +8,9 @@ sub: server
 page: Quick Start Guide
 ---
 
-Minio Cloud Storage Server is an open source object storage server released under Apache License V2.  Minio Server is best suited for storing blobs of information ranging from KBs to TBs each. Minio Server stores objects such as photos, videos, log files, backups, container / VM images and so on. It is also compatible with Amazon S3 cloud storage service. In a simplistic sense, Minio Server is like a FTP server with a simple get / put API over HTTP.
+Minio is an open source object storage server released under Apache License v2.  It is best suited for storing unstructured data such as photos, videos, log files, backups, container / VM images etc. Size of a single object can range from few KBs to 5TB. It is compatible with Amazon S3 cloud storage service.
 
-Minio Server follows a minimalist design philosophy. It is light enough for developers to bundle it with their application stack. It simply sits in deployment along with your NodeJS, Redis, MySQL and the likes. 
+Minio Server follows a minimalist design philosophy. It is a single binary light enough to be bundled along application stack, similar to NodeJS, Redis, MySQL and the likes. Minio uses continous ... - TODO
  
 ## <span>1</span> Install
 
@@ -226,11 +226,8 @@ Bucket 's3://testbucket/' removed
 
 <!-- Table -->
 
-Minio Client : mc provides minimal tools to work with Amazon S3 compatible cloud storage and filesystems. It has features like resumable uploads/downloads, progress bar, parallel copy. mc is written in golang and released under Apache license v2. 
-<a href="minio-client.html"> Minio Client</a>
+Minio Client : mc provides minimal tools to work with Amazon S3 compatible cloud storage and filesystems. It has features like resumable uploads/downloads, progress bar, mirroring etc. mc is written in golang and released under Apache license v2. <a href="minio-client.html"> Minio Client</a>
 
-Minio SDK : 
-
-Need to use Minio's functionality inside your programs? Please explore our available SDKs. <a href="minio-sdk.html">Minio SDK </a>
+Minio SDK : Need to use Minio's functionality inside your programs? Please explore our available SDKs. <a href="minio-sdk.html">Minio SDK </a>
 
   

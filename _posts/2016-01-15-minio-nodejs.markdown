@@ -171,7 +171,7 @@ buckets : [ { name: 'aaron',
 <tbody>
 	<tr>
 	 <td>Bundle the Minio Cloud Storage Server with your Application Stack.</td>
-	 <td><a href="minio-client.html">Go to Minio Server</a></td>
+	 <td><a href="minio-server.html">Go to Minio Server</a></td>
 	</tr>
 	<tr>
 	 <td>Need Minio functionality inside your applications / programs?</td>
