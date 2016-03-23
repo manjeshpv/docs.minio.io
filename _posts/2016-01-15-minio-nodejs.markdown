@@ -54,10 +54,102 @@ minioClient.listBuckets(function(e, buckets) {
 if (e)
     return console.log(e);
     console.log('buckets :', buckets);
-});</code></pre>
+});
+</code></pre>
  
+####Running the above example 
+
+<ul style="list-style: none;">
+	
+<li> <i class="fa fa-caret-right"></i> Sample app.js :
+<pre class="code-toolbar"><code class="language-bash">var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('express-handlebars'),hbs;
+var Minio = require('minio');
+var app = express();
+
+var minioClient = new Minio({
+     endPoint: 'play.minio.io',
+     port: 9000,
+     accessKey: 'Q3AM3UQ867SPQQA43P2F',
+     secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+});
+
+
+app.set('port',1337);
+app.set('views', path.join(__dirname,'views'));
+
+hbs = handlebars.create({
+        defaultLyout: 'main'
+});
+
+app.engine('handlebars',hbs.engine);
+app.set('view engine', 'handlebars');
+
+
+app.get('/', function(request, response) {
+
+
+  minioClient.listBuckets(function(e, buckets) {
+     if (e)
+         return console.log(e);
+
+         console.log('buckets :', buckets);
+     });
+  response.render('index');
+});
+
+http.createServer(app).listen(app.get('port'), function() {
+
+        console.log('Server listening on port ' + app.get('port'));
+});
+</code></pre>
+</li>
+<br>
+
  
-Running the above example
+
+<li> <i class="fa fa-caret-right"></i> Console Output 
+<pre><code class="language-bash">$ node app
+Server listening on port 1337
+
+buckets : [ { name: 'aaron',
+    creationDate: Tue Mar 22 2016 17:14:04 GMT-0700 (PDT) },
+  { name: 'mark',
+    creationDate: Fri Feb 05 2016 05:53:52 GMT-0800 (PST) },
+  { name: 'mc-binaries',
+    creationDate: Sun Feb 07 2016 18:19:39 GMT-0800 (PST) },
+  { name: 'minio-binaries',
+    creationDate: Thu Feb 18 2016 13:00:42 GMT-0800 (PST) },
+  { name: 'my-bucketname',
+    creationDate: Tue Mar 22 2016 19:47:48 GMT-0700 (PDT) },
+  { name: 'mybucket',
+    creationDate: Tue Mar 22 2016 22:01:07 GMT-0700 (PDT) },
+  { name: 'mybucketname',
+    creationDate: Tue Mar 22 2016 20:04:39 GMT-0700 (PDT) },
+  { name: 'mydee',
+    creationDate: Wed Mar 23 2016 01:25:13 GMT-0700 (PDT) },
+  { name: 'newbucket',
+    creationDate: Thu Jan 28 2016 17:23:11 GMT-0800 (PST) },
+  { name: 'rmskd',
+    creationDate: Mon Mar 21 2016 13:27:17 GMT-0700 (PDT) },
+  { name: 's3git-test',
+    creationDate: Sun Mar 20 2016 09:08:36 GMT-0700 (PDT) },
+  { name: 'test',
+    creationDate: Mon Feb 29 2016 15:30:15 GMT-0800 (PST) },
+  { name: 'test123',
+    creationDate: Wed Jan 27 2016 21:19:18 GMT-0800 (PST) },
+  { name: 'testhelen',
+    creationDate: Fri Feb 26 2016 20:09:11 GMT-0800 (PST) } ]
+</code></pre>
+</li>
+<br>
+<li> <i class="fa fa-caret-right"></i>
+	Open <a href="http://localhost:1337">http://localhost:1337</a> on your browser
+</li>
+</ul>
+<!--
 <pre class="code-toolbar"><code class="language-html">TBD. WE need to be able to do minioClient.public_url 
 
 &lt;!doctype html&gt;
@@ -72,9 +164,27 @@ Running the above example
         &lt;/p&gt;
         {{/each}}
     &lt;/body&gt;
-&lt;/html&gt;</code></pre> 
+&lt;/html&gt;
+</code></pre> -->
+
 
  
 ## <span>3</span> Next Steps : Explore Further
 
-Now that you have run this example successfully, you can go look at all our other APIs in our API Guide or check out our full examples. You can also visit our Recipes sections to get answers to specific needs in your project. 
+<table class="table table-bordered">
+
+
+<tbody>
+	<tr>
+	 <td>Bundle the Minio Cloud Storage Server with your Application Stack. </td>
+	 <td><a href="minio-client.html"> Go to Minio Server</a></td>
+  
+	</tr>
+	<tr>
+	 <td>Need Minio functionality inside your applications / programs? </td>
+	 <td><a href="minio-sdk.html"> Go to Minio SDK</a></td>
+  
+	</tr> 
+</tbody>
+</table>
+ 
