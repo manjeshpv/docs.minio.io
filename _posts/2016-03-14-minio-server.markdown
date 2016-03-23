@@ -38,53 +38,47 @@ Minio server is light enough to be bundled with application stack, similar to No
             {% endfor %}
         </ul>
     </li>
+
+<ul style="list-style: none;">
+ <br />
+ <li><i class="fa fa-caret-right"></i> Start the Minio Server on any folder and you should see the AccessKey and SecretKey printed as shown below.</li>
+ <li><i class="fa fa-caret-right"></i> Your end point for object storage is shown below.</li>
+ <li><i class="fa fa-caret-right"></i> You may also access the Minio Browser in your web browser at the same URLs. Use your AccessKey and SecretKey to login.</li>
+</ul>
+
 </ul>
 
 <div class="tab-content">
     <!-- GNU/Linux -->
-    <div class="tab-pane fade" id="gnu-linux">
+    <div class="tab-pane fade" id="linux-amd64">
+<h5>Start Minio Server on Linux.</h5>
         <pre class="m-b-10"><code class="language-bash">$ chmod +x minio
-$ ./minio --help</code></pre>
-    </div>
+$ ./minio --help
+$ minio server ~/Photos
 
-    <!-- OSX -->
-    <div class="tab-pane fade" id="mac-osx">
-        <pre class="m-b-10"><code class="language-bash">$ chmod 755 minio
-$ ./minio --help</code></pre>
-    </div>
+AccessKey: WLGDGYAQYIGI833EV05A  SecretKey: BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF  Region: us-east-1
 
-    <!-- Windows -->
-    <div class="tab-pane fade" id="windows">
-        <pre class="m-b-10"><code class="language-bash">C:\Users\Username\Downloads> minio.exe --help </code></pre>
-    </div>
+Minio Object Storage:
+	 http://127.0.0.1:9000
+	 http://10.0.0.3:9000
 
-    <!-- Docker -->
-    <div class="tab-pane fade" id="docker">
-        <pre class="m-b-10"><code class="language-bash">$ docker pull minio/minio</code></pre>
-    </div>
+Minio Browser:
+	 http://127.0.0.1:9000
+	 http://10.0.0.3:9000
 
-    <!-- Source -->
-    <div class="tab-pane fade" id="source">
-        <p>Source installation is intended for only developers and advanced users. For general use, please download official releases from https://minio.io/download. If you do not have a working Golang environment, please follow <a href="https://github.com/minio/minio/blob/master/INSTALLGO.md"> Install Golang </a></p>
-
-        <pre class="m-b-10 m-t-10"><code class="language-bash">$ go get -d github.com/minio/minio
-$ cd $GOPATH/src/github.com/minio/minio
-$ make</code></pre>
-    </div>
+To configure Minio Client:
+    $ wget https://dl.minio.io/client/mc/release/linux-amd64/mc
+    $ chmod 755 mc
+    $ ./mc config host add myminio http://localhost:9000 WLGDGYAQYIGI833EV05A BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF
+</code></pre>
 </div>
 
-## <span>2</span> Examples
-
-#### Starting Minio Cloud Storage Server
-
-<ul style="list-style: none;">
-
- <li><i class="fa fa-caret-right"></i> Start the Minio Server on any folder and you should see the AccessKey and SecretKey printed as shown below.</li>
- <li><i class="fa fa-caret-right"></i> Your end point for object storage is shown below.</li>
- <li><i class="fa fa-caret-right"></i> You may also access the Minio Browser in your web browser at the same URLs. Use your AccessKey and SecretKey to login.</li>
-
-<br>
-<pre class="m-b-10"><code class="language-bash">$ minio server ~/Photos
+    <!-- OSX -->
+    <div class="tab-pane fade" id="darwin-amd64">
+<h5>Start Minio Server on Mac OSX.</h5>
+        <pre class="m-b-10"><code class="language-bash">$ chmod 755 minio
+$ ./minio --help
+$ minio server ~/Photos
 
 AccessKey: WLGDGYAQYIGI833EV05A  SecretKey: BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF  Region: us-east-1
 
@@ -101,8 +95,49 @@ To configure Minio Client:
     $ chmod 755 mc
     $ ./mc config host add myminio http://localhost:9000 WLGDGYAQYIGI833EV05A BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF
 </code></pre>
+    </div>
 
-</ul>
+    <!-- Windows -->
+    <div class="tab-pane fade" id="windows-amd64">
+<h5>Start Minio Server on Microsoft Windows.</h5>
+        <pre class="m-b-10"><code class="language-bash">C:\Users\Username\Downloads> minio.exe --help
+C:\Users\Username\Downloads> minio.exe server D:\Photos
+
+AccessKey: WLGDGYAQYIGI833EV05A  SecretKey: BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF  Region: us-east-1
+
+Minio Object Storage:
+	 http://127.0.0.1:9000
+	 http://10.0.0.3:9000
+
+Minio Browser:
+	 http://127.0.0.1:9000
+	 http://10.0.0.3:9000
+
+To configure Minio Client:
+    Download "mc" from https://dl.minio.io/client/mc/release/windows-amd64/mc
+    > mc.exe config host add myminio http://localhost:9000 WLGDGYAQYIGI833EV05A BYvgJM101sHngl2uzjXS/OBF/aMxAN06JrJ3qJlF
+</code></pre>
+    </div>
+
+    <!-- Docker -->
+    <div class="tab-pane fade" id="docker">
+<h5>Start Minio Server as Docker container.</h5>
+        <pre class="m-b-10"><code class="language-bash">$ docker pull minio/minio
+$ docker run -p 9000:9000 minio/minio</code></pre>
+    </div>
+
+    <!-- Source -->
+    <div class="tab-pane fade" id="source">
+        <p>Source installation is intended for only developers and advanced users. For typical use, please download official releases from <a href="https://minio.io/download">https://minio.io/download</a>. If you do not have a working Golang environment, please follow <a href="https://github.com/minio/minio/blob/master/INSTALLGO.md"> Install Golang </a></p>
+
+        <pre class="m-b-10 m-t-10"><code class="language-bash">$ go get -d github.com/minio/minio
+$ cd $GOPATH/src/github.com/minio/minio
+$ make</code></pre>
+    </div>
+</div>
+
+## <span>2</span> Examples
+
 <!--We agreed in our meeting that we will leave this here temporarily. Move it to Recipes (How Tos) in the next release -->
 <!-- Replace this with How to use Minio Browser in another release-->
 

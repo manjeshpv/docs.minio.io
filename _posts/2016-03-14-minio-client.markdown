@@ -61,20 +61,32 @@ Minio Client (mc) provides a modern alternative to UNIX commands like ls, cat, c
 
 <div class="tab-content">
     <!-- GNU/Linux -->
-    <div class="tab-pane fade" id="gnu-linux">
+    <div class="tab-pane fade" id="linux-amd64">
         <pre class="m-b-10"><code class="language-bash">$ chmod +x mc
 $ ./mc --help</code></pre>
     </div>
 
     <!-- OSX -->
-    <div class="tab-pane fade" id="mac-osx">
+    <div class="tab-pane fade" id="darwin-amd64">
         <pre class="m-b-10"><code class="language-bash">$ chmod 755 mc
 $ ./mc --help</code></pre>
     </div>
 
     <!-- Windows -->
-    <div class="tab-pane fade" id="windows">
+    <div class="tab-pane fade" id="windows-amd64">
         <pre class="m-b-10"><code class="language-bash">C:\Users\Username\Downloads> mc.exe --help </code></pre>
+    </div>
+
+    <!-- Solaris -->
+    <div class="tab-pane fade" id="solaris-amd64">
+        <pre class="m-b-10"><code class="language-bash">$ chmod 755 mc
+$ ./mc --help</code></pre>
+    </div>
+
+    <!-- FreeBSD -->
+    <div class="tab-pane fade" id="freebsd-amd64">
+        <pre class="m-b-10"><code class="language-bash">$ chmod 755 mc
+$ ./mc --help</code></pre>
     </div>
 
     <!-- Source -->

@@ -129,15 +129,15 @@ minioDownload:
 
 minioGuide:
   - title    : GNU/Linux
-    tab      : gnu-linux
+    tab      : linux-amd64
     icon     : linux
     order    : 1
   - title    : Mac OSX
-    tab      : mac-osx
+    tab      : darwin-amd64
     icon     : apple
     order    : 2
   - title    : Windows
-    tab      : windows
+    tab      : windows-amd64
     icon     : windows
     order    : 3
   - title    : Docker Container
@@ -149,10 +149,10 @@ minioGuide:
     icon     : cube
     order    : 6
   - title    : Solaris
-    tab      : mac-osx
+    tab      : solaris-amd64
     icon     : cube
     order    : 4
   - title    : FreeBSD
-    tab      : mac-osx
+    tab      : freebsd-amd64
     icon     : cube
     order    : 5
