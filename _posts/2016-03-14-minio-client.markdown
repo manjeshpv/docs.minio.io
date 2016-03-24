@@ -104,7 +104,7 @@ $ ./mc --help</code></pre>
 <ul style="list-style: none;">
  <li> <i class="fa fa-caret-right"></i> Get your AccessKeyID and SecretAccessKey by following <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html">AWS Credentials  Guide.</a> </li>
  <br>
-<li> <i class="fa fa-caret-right"></i> Using your keys configure ~/.mc/config.json configuration file with this command
+<li> <i class="fa fa-caret-right"></i> Minio client adds all your configuration to  ~/.mc/config.json with this command.
 <pre class="m-b-10"><code class="language-bash">$ mc config host add &lt;ALIAS&gt; &lt;YOUR-S3-ENDPOINT&gt; &lt;YOUR-ACCESS-KEY&gt; &lt;YOUR-SECRET-KEY&gt; S3v4
 </code></pre>
 </li>
@@ -129,7 +129,7 @@ Bucket created successfully ‘mys3/mybucket’.
 <br>
 
 <li><i class="fa fa-caret-right"></i> List Bucket
-<pre class="m-b-10"><code class="language-bash">$ mc ls <S3 Alias></code></pre>
+<pre class="m-b-10"><code class="language-bash">$ mc ls &lt;S3 Alias&gt;</code></pre>
 
 </li>
 <li><i class="fa fa-caret-right"></i> List Bucket : Example
