@@ -88,37 +88,37 @@ innerLinks:
   - title     : Quick Start Guide
     urlPrefix :
 
-# minio server & client
+# minio server, client & description
 minioDownload:
-  - title      : GNU/Linux x64
+  - title      : <span>GNU/Linux</span> x64
     downloadms : https://dl.minio.io/server/minio/release/linux-amd64/minio
     downloadmc : https://dl.minio.io/client/mc/release/linux-amd64/mc
     icon       : linux
-  - title      : GNU/Linux x32
+  - title      : <span>GNU/Linux</span> x32
     downloadms : https://dl.minio.io/server/minio/release/linux-386/minio
     downloadmc : https://dl.minio.io/client/mc/release/linux-386/mc
     icon       : linux
-  - title      : GNU/Linux A32
+  - title      : <span>GNU/Linux</span> A32
     downloadms : https://dl.minio.io/server/minio/release/linux-arm/minio
     downloadmc : https://dl.minio.io/client/mc/release/linux-arm/mc
     icon       : linux
-  - title      : Mac OSX x64
+  - title      : <span>Mac OSX</span> x64
     downloadms : https://dl.minio.io/server/minio/release/darwin-amd64/minio
     downloadmc : https://dl.minio.io/client/mc/release/darwin-amd64/mc
     icon       : apple
-  - title      : Windows x64
+  - title      : <span>Windows</span> x64
     downloadms : https://dl.minio.io/server/minio/release/windows-amd64/minio.exe
     downloadmc : https://dl.minio.io/client/mc/release/windows-amd64/mc.exe
     icon       : windows
-  - title      : Windows x32
+  - title      : <span>Windows</span> x32
     downloadms : https://dl.minio.io/server/minio/release/windows-386/minio.exe
     downloadmc : https://dl.minio.io/client/mc/release/windows-386/mc.exe
     icon       : windows
-  - title      : Solaris x64
+  - title      : <span>Solaris</span> x64
     downloadms :
     downloadmc : https://dl.minio.io/client/mc/release/solaris-amd64/mc
     icon       : cube
-  - title      : FreeBSD x64
+  - title      : <span>FreeBSD</span> x64
     downloadms :
     downloadmc : https://dl.minio.io/client/mc/release/freebsd-amd64/mc
     icon       : cube
@@ -136,11 +136,11 @@ minioGuide:
     tab      : windows-amd64
     icon     : windows
     order    : 3
-  - title    : Docker Container
+  - title    : Docker
     tab      : docker
     icon     : cube
     order    : 7
-  - title    : From Source
+  - title    : Source
     tab      : source
     icon     : cube
     order    : 6
@@ -152,3 +152,9 @@ minioGuide:
     tab      : freebsd-amd64
     icon     : cube
     order    : 5
+
+msInstallInfo: '<ol class="list-alt">
+                    <li>Start the Minio Server on any folder and you should see the AccessKey and SecretKey printed as shown below.</li>
+                    <li>Your end point for object storage is shown below.</li>
+                    <li>You may also access the Minio Browser in your web browser at the same URLs. Use your AccessKey and SecretKey to login.</li>
+                </ol>'

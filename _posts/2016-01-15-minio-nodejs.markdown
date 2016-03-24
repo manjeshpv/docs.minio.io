@@ -33,7 +33,7 @@ page: Quick Start Guide
             
             <div class="clearfix"></div>
             
-            <pre><code class="language-bash">$ git clone https://github.com/minio/minio-js 
+            <pre class="code-toolbar"><code class="language-bash">$ git clone https://github.com/minio/minio-js 
 $ cd minio-js
 $ npm install
 $ npm install -g</code></pre>
@@ -57,12 +57,9 @@ if (e)
 });
 </code></pre>
  
-#### Running the above example 
+Running the above example - app.js
 
-<ul style="list-style: none;">
-	
-<li> <i class="fa fa-caret-right"></i> Sample app.js :
-<pre class="code-toolbar"><code class="language-bash">var express = require('express');
+<pre class="code-toolbar m-b-10"><code class="language-bash">var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express-handlebars'),hbs;
@@ -81,7 +78,7 @@ app.set('port',1337);
 app.set('views', path.join(__dirname,'views'));
 
 hbs = handlebars.create({
-        defaultLyout: 'main'
+    defaultLyout: 'main'
 });
 
 app.engine('handlebars',hbs.engine);
@@ -102,50 +99,64 @@ http.createServer(app).listen(app.get('port'), function() {
         console.log('Server listening on port ' + app.get('port'));
 });
 </code></pre>
-</li>
-<br>
 
-### Running the above example
+Running the above example - Console Output 
 
-<li> <i class="fa fa-caret-right"></i> Console Output 
-<pre><code class="language-bash">$ node app
+<pre class="code-toolbar m-b-10"><code class="language-json">$ node app
 Server listening on port 1337
 
-buckets : [ { name: 'aaron',
-    creationDate: Tue Mar 22 2016 17:14:04 GMT-0700 (PDT) },
-  { name: 'mark',
-    creationDate: Fri Feb 05 2016 05:53:52 GMT-0800 (PST) },
-  { name: 'mc-binaries',
-    creationDate: Sun Feb 07 2016 18:19:39 GMT-0800 (PST) },
-  { name: 'minio-binaries',
-    creationDate: Thu Feb 18 2016 13:00:42 GMT-0800 (PST) },
-  { name: 'my-bucketname',
-    creationDate: Tue Mar 22 2016 19:47:48 GMT-0700 (PDT) },
-  { name: 'mybucket',
-    creationDate: Tue Mar 22 2016 22:01:07 GMT-0700 (PDT) },
-  { name: 'mybucketname',
-    creationDate: Tue Mar 22 2016 20:04:39 GMT-0700 (PDT) },
-  { name: 'mydee',
-    creationDate: Wed Mar 23 2016 01:25:13 GMT-0700 (PDT) },
-  { name: 'newbucket',
-    creationDate: Thu Jan 28 2016 17:23:11 GMT-0800 (PST) },
-  { name: 'rmskd',
-    creationDate: Mon Mar 21 2016 13:27:17 GMT-0700 (PDT) },
-  { name: 's3git-test',
-    creationDate: Sun Mar 20 2016 09:08:36 GMT-0700 (PDT) },
-  { name: 'test',
-    creationDate: Mon Feb 29 2016 15:30:15 GMT-0800 (PST) },
-  { name: 'test123',
-    creationDate: Wed Jan 27 2016 21:19:18 GMT-0800 (PST) },
-  { name: 'testhelen',
-    creationDate: Fri Feb 26 2016 20:09:11 GMT-0800 (PST) } ]
+buckets : [
+    { 
+        name: 'aaron', 
+        creationDate: Tue Mar 22 2016 17:14:04 GMT-0700 (PDT) 
+    },
+    { 
+        name: 'mark',
+        creationDate: Fri Feb 05 2016 05:53:52 GMT-0800 (PST) 
+    },
+    { 
+        name: 'mc-binaries',
+        creationDate: Sun Feb 07 2016 18:19:39 GMT-0800 (PST) },
+    { 
+        name: 'minio-binaries',
+        creationDate: Thu Feb 18 2016 13:00:42 GMT-0800 (PST) },
+    { 
+        name: 'my-bucketname',
+        creationDate: Tue Mar 22 2016 19:47:48 GMT-0700 (PDT) },
+    { 
+        name: 'mybucket',
+        creationDate: Tue Mar 22 2016 22:01:07 GMT-0700 (PDT) },
+    { 
+        name: 'mybucketname',
+        creationDate: Tue Mar 22 2016 20:04:39 GMT-0700 (PDT) },
+    { 
+        name: 'mydee',
+        creationDate: Wed Mar 23 2016 01:25:13 GMT-0700 (PDT) },
+    { 
+        name: 'newbucket',
+        creationDate: Thu Jan 28 2016 17:23:11 GMT-0800 (PST) },
+    { 
+        name: 'rmskd',
+        creationDate: Mon Mar 21 2016 13:27:17 GMT-0700 (PDT) },
+    { 
+        name: 's3git-test',
+        creationDate: Sun Mar 20 2016 09:08:36 GMT-0700 (PDT) },
+    { 
+        name: 'test',
+        creationDate: Mon Feb 29 2016 15:30:15 GMT-0800 (PST) },
+    { 
+        name: 'test123',
+        creationDate: Wed Jan 27 2016 21:19:18 GMT-0800 (PST) },
+    { 
+        name: 'testhelen',
+        creationDate: Fri Feb 26 2016 20:09:11 GMT-0800 (PST) 
+    }
+]
 </code></pre>
-</li>
-<br>
-<li> <i class="fa fa-caret-right"></i>
-	Open <a href="http://localhost:1337">http://localhost:1337</a> on your browser
-</li>
-</ul>
+
+
+Open <a href="http://localhost:1337">http://localhost:1337</a> on your browser
+
 <!--
 <pre class="code-toolbar"><code class="language-html">TBD. WE need to be able to do minioClient.public_url 
 
@@ -167,15 +178,6 @@ buckets : [ { name: 'aaron',
  
 ## <span>3</span> Next Steps : Explore Further
 
-<table class="table table-bordered">
-<tbody>
-	<tr>
-	 <td>Bundle the Minio Cloud Storage Server with your Application Stack.</td>
-	 <td><a href="minio-server.html">Go to Minio Server</a></td>
-	</tr>
-	<tr>
-	 <td>Need Minio functionality inside your applications / programs?</td>
-	 <td><a href="minio-sdk.html">Go to Minio SDK</a></td>
-	</tr> 
-</tbody>
-</table>
+Bundle the Minio Cloud Storage Server with your Application Stack with <a href="minio-server.html"> Minio Server</a>
+
+Need Minio functionality inside your applications / programs? <a href="minio-sdk.html"> Go to Minio SDK</a>

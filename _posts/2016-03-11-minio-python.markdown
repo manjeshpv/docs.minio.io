@@ -16,9 +16,11 @@ page: Quick Start Guide
 
 <pre class="code-toolbar m-b-10"><code class="language-python">from minio import Minio
 
-minioclient = Minio('play.minio.io:9000',
-               access_key='Q3AM3UQ867SPQQA43P2F',
-               secret_key='zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG', insecure=False )
+minioclient =   Minio(
+    'play.minio.io:9000',
+    access_key='Q3AM3UQ867SPQQA43P2F',
+    secret_key='zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG', insecure=False 
+)
 
 buckets = minioclient.list_buckets()
 
@@ -26,11 +28,9 @@ for bucket in buckets:
     print(bucket.name, bucket.creation_date)</code></pre>
 	
  
-#### Running the above example
+Running the above example on CLI
 
-<ul style="list-style: none;"> 	
-<li> <i class="fa fa-caret-right"></i> Run on CLI
-<pre><code class="language-bash">$ python list_buckets.py
+<pre class="code-toolbar m-b-10"><code class="language-python">$ python list_buckets.py
 ('aaron', datetime.datetime(2016, 2, 8, 19, 47, 12, 453000, tzinfo=<UTC>))
 ('dee', datetime.datetime(2016, 3, 18, 0, 2, 4, 181000, tzinfo=<UTC>))
 ('flib', datetime.datetime(2016, 1, 31, 17, 23, 7, 757000, tzinfo=<UTC>))
@@ -52,16 +52,6 @@ for bucket in buckets:
  
 ## <span>3</span> Next Steps : Explore Further
 
-<table class="table table-bordered">
-<tbody>
-	<tr>
-	 <td>Bundle the Minio Cloud Storage Server with your Application Stack. </td>
-	 <td><a href="minio-server.html"> Go to Minio Server</a></td>
-	</tr>
-	<tr>
-	 <td>Need Minio functionality inside your applications / programs? </td>
-	 <td><a href="minio-sdk.html">Go to Minio SDK</a></td>
-	</tr> 
-</tbody>
-</table>
- 
+Bundle the Minio Cloud Storage Server with your Application Stack with <a href="minio-server.html"> Minio Server</a>
+
+Need Minio functionality inside your applications / programs? <a href="minio-sdk.html"> Go to Minio SDK</a>

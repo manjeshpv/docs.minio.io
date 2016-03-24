@@ -12,7 +12,7 @@ This document assumes that you have installed Golang, if not please follow these
 
 ## <span>1</span>Install
 
-    $ go get github.com/minio/minio-go
+<pre class=""><code class="language-bash">$ go get github.com/minio/minio-go</code></pre>
 
 
 ## <span>2</span>Example
@@ -51,11 +51,8 @@ func main() {
 }
 </code></pre>
 
+Running the above example on CLI
 
-#### Running the above example
-
-<ul style="list-style: none;">
-<li> <i class="fa fa-caret-right"></i> Run on CLI
 <pre><code class="language-bash">$ go run listbuckets.go
 2016/03/22 21:27:52 aaron 2016-02-08 19:47:12.453 +0000 UTC
 2016/03/22 21:27:52 dee 2016-03-18 00:02:04.181 +0000 UTC
@@ -66,15 +63,6 @@ func main() {
 
 ## <span>3</span> Next Steps : Explore Further
 
-<table class="table table-bordered">
-<tbody>
-    <tr>
-        <td>Bundle the Minio Cloud Storage Server with your Application Stack.</td>
-        <td><a href="minio-server.html">Go to Minio Server</a></td>
-    </tr>
-    <tr>
-        <td>Need Minio functionality inside your applications / programs?</td>
-        <td><a href="minio-sdk.html">Go to Minio SDK</a></td>
-    </tr>
-</tbody>
-</table>
+Bundle the Minio Cloud Storage Server with your Application Stack with <a href="minio-server.html"> Minio Server</a>
+
+Need Minio functionality inside your applications / programs? <a href="minio-sdk.html"> Go to Minio SDK</a>

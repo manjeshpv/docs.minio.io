@@ -67,7 +67,7 @@
   Action Buttons
 --------------------------*/
 .btn-action {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 	& > li {
 		padding: 0 2px;
 		& > a {
@@ -132,10 +132,11 @@
 
 		& > a {
 			display: block;
-			padding: 10px 20px;
+			padding: 10px 15px;
 			border-radius: 2px;
 			color: #496572;
 			background-color: #F1F1F1;
+			font-size: 15px;
 
 			@media(max-width: @screen-xs-max) {
 				padding: 8px 15px 7px;
@@ -237,13 +238,15 @@ pre {
 	}
 
 	&.pre-alt {
-		margin: 10px -15px 0;
+		margin: 20px -35px 0;
 		border-radius: 0 0 3px 3px;
 	}
 }
 
 code {
-	padding: 2px 8px;
+	padding: 1px 8px 2px;
+	border: 1px solid #E0E0E0;
+	font-size: @font-size-base;
 }
 
 
@@ -281,9 +284,98 @@ code {
 --------------------------*/
 .tc-alt {
 	background: #f1f1f1;
-	padding: 35px 15px 0;
-	width: 100%;
-	max-width: 820px;
-	display: inline-block;
+	padding: 35px 35px 0;
 	border-radius: 3px;
+}
+
+
+/*-------------------------
+  List
+--------------------------*/
+.list-inline {
+	margin-left: 0;
+}
+
+.list-alt {
+	padding-left: 17px;
+
+	& > li {
+		margin-bottom: 5px;
+	}
+}
+
+
+/*-------------------------
+  Accordion
+--------------------------*/
+.accordion {
+	margin-bottom: 3px;
+	position: relative;
+	background: #f5f5f5;
+	border-radius: 3px;
+
+	& > a {
+		display: block;
+		padding: 13px 15px 13px 52px;
+		color: @text-color;
+		border-radius: 3px 3px 0 0;
+
+		&:before,
+		&:after {
+			font-size: 13px;
+			font-family: FontAwesome;
+			margin-right: 15px;
+			position: absolute;
+			left: 23px;
+			top: 17px;
+			.transition(all);
+			.transition-duration(300ms);
+		}
+
+		&:before {
+			content: '\f067';
+			.scale(1);
+		}
+
+		&:after {
+			content: '\f068';
+			.scale(0);
+		}
+	}
+
+	&.active {
+		margin-bottom: 15px;
+
+		> a {
+			background-color: #e4e4e4;
+
+			&:before {
+				content: '\f067';
+				.scale(0);
+			}
+
+			&:after {
+				content: '\f068';
+				.scale(1);
+			}
+		}
+	}
+
+	.panel-body {
+		padding: 30px 35px;
+	}
+}
+
+
+/*-------------------------
+  Minio Server
+--------------------------*/
+.dt-ms {
+	& > li {
+		& > a {
+			& > span {
+				display: none;
+			}
+		}
+	}
 }
