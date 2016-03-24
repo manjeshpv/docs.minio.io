@@ -1527,7 +1527,7 @@ code {
   padding: 2px 4px;
   font-size: 90%;
   color: #496572;
-  background-color: #E8E8E8;
+  background-color: #fff;
   border-radius: 3px;
 }
 kbd {
@@ -6759,19 +6759,31 @@ button.close {
   font-style: normal;
 }
 .m-l-5 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 .m-r-5 {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 .m-t-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
+}
+.m-t-20 {
+  margin-top: 20px !important;
+}
+.m-t-30 {
+  margin-top: 30px !important;
 }
 .m-b-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 .m-b-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
+}
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+.m-b-0 {
+  margin-bottom: 0 !important;
 }
 /*-------------------------
   Back to Home
@@ -6830,7 +6842,7 @@ button.close {
   Action Buttons
 --------------------------*/
 .btn-action {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .btn-action > li {
   padding: 0 2px;
@@ -6892,10 +6904,11 @@ button.close {
 }
 .d-tabs > li > a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 2px;
   color: #496572;
   background-color: #F1F1F1;
+  font-size: 15px;
 }
 @media (max-width: 767px) {
   .d-tabs > li > a {
@@ -7033,11 +7046,13 @@ pre:not(.pre-alt) {
   display: inline-block;
 }
 pre.pre-alt {
-  margin: 10px -15px 0;
+  margin: 20px -35px 0;
   border-radius: 0 0 3px 3px;
 }
 code {
-  padding: 2px 8px;
+  padding: 1px 8px 2px;
+  border: 1px solid #E0E0E0;
+  font-size: 17px;
 }
 /*-------------------------
   Dropdown
@@ -7064,11 +7079,92 @@ code {
 --------------------------*/
 .tc-alt {
   background: #f1f1f1;
-  padding: 35px 15px 0;
-  width: 100%;
-  max-width: 820px;
-  display: inline-block;
+  padding: 35px 35px 0;
   border-radius: 3px;
+}
+/*-------------------------
+  List
+--------------------------*/
+.list-inline {
+  margin-left: 0;
+}
+.list-alt {
+  padding-left: 17px;
+}
+.list-alt > li {
+  margin-bottom: 5px;
+}
+/*-------------------------
+  Accordion
+--------------------------*/
+.accordion {
+  margin-bottom: 3px;
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+.accordion > a {
+  display: block;
+  padding: 13px 15px 13px 52px;
+  color: #496572;
+  border-radius: 3px 3px 0 0;
+}
+.accordion > a:before,
+.accordion > a:after {
+  font-size: 13px;
+  font-family: FontAwesome;
+  margin-right: 15px;
+  position: absolute;
+  left: 23px;
+  top: 17px;
+  -webkit-transition: all;
+  -o-transition: all;
+  transition: all;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.accordion > a:before {
+  content: '\f067';
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.accordion > a:after {
+  content: '\f068';
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.accordion.active {
+  margin-bottom: 15px;
+}
+.accordion.active > a {
+  background-color: #e4e4e4;
+}
+.accordion.active > a:before {
+  content: '\f067';
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.accordion.active > a:after {
+  content: '\f068';
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.accordion .panel-body {
+  padding: 30px 35px;
+}
+/*-------------------------
+  Minio Server
+--------------------------*/
+.dt-ms > li > a > span {
+  display: none;
 }
 * {
   -webkit-font-smoothing: antialiased;
@@ -7185,4 +7281,7 @@ a {
   margin: 0px 2px 0;
   border-radius: 2px;
   font-size: 12px;
+}
+code[class*="language-"] {
+  border: 0;
 }
