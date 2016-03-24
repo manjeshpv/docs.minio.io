@@ -65,8 +65,6 @@ sdk:
     class: python
   - title: Java
     class: java
-  - title: .Net
-    class: net
 
 #documentation links
 docLinks:
@@ -84,8 +82,6 @@ docLinks:
     url   : minio-python
   - title : Minio SDK Java
     url   : minio-java
-  - title : Minio SDK .Net
-    url   : minio-net
 
 # inner links [more to come: Recipies & Best Practices]
 innerLinks:
