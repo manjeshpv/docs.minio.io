@@ -68,9 +68,7 @@ public class ListMyBuckets {
 ~</code></pre>
 
 
-### Running the above Example
-	  
-Compile the above snippet by typing in your terminal 
+Running the above Example - Compile the above snippet by typing in your terminal 
 	  
 <pre class="code-toolbar m-b-10"><code class="language-java">javac -cp "minio-1.0.1-all.jar"  ListMyBuckets.java</code></pre>
 
@@ -79,8 +77,7 @@ Run the above snipper by typing in your terminal
 <pre class="code-toolbar m-b-10"><code class="language-java">java ListMyBuckets</code></pre>
 	 
 Results should look like this :			
-<pre class="code-toolbar m-b-10"><code class="language-java">
-productimages-bucket
+<pre class="code-toolbar m-b-10"><code class="language-java">productimages-bucket
 marketingimages-bucket
 testbucket
 logfiles-bucket</code></pre>
@@ -88,15 +85,6 @@ logfiles-bucket</code></pre>
 		 
 ## <span>3</span> Next Steps : Explore Further
 
-<table class="table table-bordered">
-<tbody>
-	<tr>
-	 <td>Bundle the Minio Cloud Storage Server with your Application Stack. </td>
-	 <td><a href="minio-server.html"> Go to Minio Server</a></td>
-	</tr>
-	<tr>
-	 <td>Need Minio functionality inside your applications / programs? </td>
-	 <td><a href="minio-sdk.html">Go to Minio SDK</a></td>
-	</tr> 
-</tbody>
-</table>
+Bundle the Minio Cloud Storage Server with your Application Stack with <a href="minio-server.html"> Minio Server</a>
+
+Need Minio functionality inside your applications / programs? <a href="minio-sdk.html"> Go to Minio SDK</a>
