@@ -21,7 +21,6 @@ page: Quick Start Guide
         <pre class="code-toolbar"><code class="language-java">&lt;dependency&gt;
     &lt;groupId&gt;io.minio&lt;/groupId&gt;
     &lt;artifactId&gt;minio&lt;/artifactId&gt;
-    &lt;artifactId&gt;minio&lt;/artifactId&gt;
     &lt;version&gt;1.0.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
     </div>
